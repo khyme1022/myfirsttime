@@ -1,4 +1,4 @@
-package com.springboot.myfirsttime.member.entity;
+package com.springboot.myfirsttime.member.data.entity;
 
 import com.fasterxml.jackson.annotation.JsonProperty;
 import lombok.*;
@@ -44,33 +44,34 @@ public class User implements UserDetails {
     public Collection<? extends GrantedAuthority> getAuthorities() {
         return this.roles.stream().map(SimpleGrantedAuthority::new).collect(Collectors.toList());
     }
-    // roles를 SimpleGrantedAuthority 객체로 변환 시킴
+    // List<String> roles를 List<SimpleGrantedAuthority> 객체로 변환 시킴
+
     @JsonProperty(access = JsonProperty.Access.WRITE_ONLY)
     @Override
     public String getUsername() {
-        return null;
-    }
-    @Override
-    public String getPassword() {
-        return null;
+        return this.uid;
+
     }
 
-
+    @JsonProperty(access = JsonProperty.Access.WRITE_ONLY)
     @Override
     public boolean isAccountNonExpired() {
         return false;
     }
 
+    @JsonProperty(access = JsonProperty.Access.WRITE_ONLY)
     @Override
     public boolean isAccountNonLocked() {
         return false;
     }
 
+    @JsonProperty(access = JsonProperty.Access.WRITE_ONLY)
     @Override
     public boolean isCredentialsNonExpired() {
         return false;
     }
 
+    @JsonProperty(access = JsonProperty.Access.WRITE_ONLY)
     @Override
     public boolean isEnabled() {
         return false;
