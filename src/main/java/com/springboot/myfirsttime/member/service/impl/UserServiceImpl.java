@@ -9,11 +9,13 @@ import org.springframework.security.core.userdetails.UserDetailsService;
 import org.springframework.security.core.userdetails.UsernameNotFoundException;
 import org.springframework.stereotype.Service;
 
+/**
+ * Username을 통해 UserDetails를 반환하는 Service 클래스
+ */
 @RequiredArgsConstructor
 @Service
 public class UserServiceImpl implements UserDetailsService {
     private final Logger LOGGER = LoggerFactory.getLogger(UserServiceImpl.class);
-
     private final UserRepository userRepository;
     @Override
     public UserDetails loadUserByUsername(String username) throws UsernameNotFoundException {
