@@ -1,6 +1,7 @@
 package com.springboot.myfirsttime.config.security;
 
 import io.jsonwebtoken.Claims;
+import io.jsonwebtoken.Jws;
 import io.jsonwebtoken.Jwts;
 import io.jsonwebtoken.SignatureAlgorithm;
 import lombok.RequiredArgsConstructor;
@@ -81,8 +82,26 @@ public class JwtTokenProvider {
         LOGGER.info("[getUsername] 토큰 기반 회원 구별 정보 추출 완료, info : {}", info);
         return info;
     }
-    
+    /*
+    클라이언트로 부터 request 객체를 파라미터로 받아 헤더 값으로 전달된 X-AUTH_TOKEN 값을 가져와 리턴
+     */
     public String resolveToken(HttpServletRequest request){
-        return null;
+        LOGGER.info("[resolveToken] HTTP 헤더에서 Token 값 추출");
+        return request.getHeader("X-AUTH-TOKEN");
+    }
+    
+    /*
+    토큰 클레임의 유효기간을 체크하는 메소드
+     */
+    public boolean validateToken(String token){
+        LOGGER.info("[validateToken] 토큰 유효 체크 시작");
+        try{
+            Jws<Claims> claims = Jwts.parser().setSigningKey(secretKey).parseClaimsJws(token);
+            return !claims.getBody().getExpiration().before(new Date());
+            // 만료일이 오늘 이전이면 false(토큰이 만료됨), 아니면 true 리턴
+        }catch (Exception e){
+            LOGGER.info("[validateToken] 토큰 유효 체크 예외 발생");
+            return false;
+        }
     }
 }
