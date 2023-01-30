@@ -2,6 +2,7 @@ package com.springboot.myfirsttime.config.security;
 
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
+import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.security.core.Authentication;
 import org.springframework.security.core.context.SecurityContextHolder;
 import org.springframework.web.filter.OncePerRequestFilter;
@@ -34,6 +35,6 @@ public class JwtAuthenticationFilter extends OncePerRequestFilter {
             LOGGER.info("[doFilterInternal] token 값 유효성 체크 완료");
         }
         filterChain.doFilter(request,response);
-
+        //doFilter 메소드 설정 시 request, response 쌍이 지나갈 때마다 컨테이너에서 실행되게 된다.
     }
 }
