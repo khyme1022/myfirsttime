@@ -13,7 +13,7 @@ import javax.servlet.http.HttpServletResponse;
 import java.io.IOException;
 
 /*
- 응답 값 설정해서 response객체에 설정
+ 인증 과정 중 예외 발생 시 응답 값 설정해서 response에 설정
  ObjectMapper - JSON to Java, Java to JSON 형변환 시키는 역할을 하는 객체
  */
 
@@ -31,7 +31,10 @@ public class CustomAuthenticationEntryPoint implements AuthenticationEntryPoint 
         response.setStatus(401);
         response.setContentType("application/json");
         response.setCharacterEncoding("utf-8");
-        response.getWriter().write(objectMapper.writeValueAsString(entryPointErrorResponse));
+        response.getWriter().write("인증 실패");
+        //response.getWriter().write(objectMapper.writeValueAsString(entryPointErrorResponse));
+
+
     }
     // 굳이 ObjectMapper를 쓰면서 형변환하고 dto 객체를 생성해서 메시지를 전달해야할까? 그냥 전달하면 안됨?
 }

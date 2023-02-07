@@ -64,7 +64,7 @@ public class JwtTokenProvider {
         return token;
     }
     /*
-        인증 성공 시 SecurityContextHolder에 저장할 Autehtication 생성하는 역할
+        인증 성공 시 SecurityContextHolder에 저장할 Authentication 생성하는 역할
      */
     public Authentication getAuthentication(String token){
         LOGGER.info("[getAuthentication] 토큰 인증 정보 조회 시작");

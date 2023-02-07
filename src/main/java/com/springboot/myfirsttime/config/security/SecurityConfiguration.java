@@ -7,6 +7,8 @@ import org.springframework.http.HttpMethod;
 import org.springframework.security.config.annotation.web.builders.HttpSecurity;
 import org.springframework.security.config.annotation.web.configuration.WebSecurityCustomizer;
 import org.springframework.security.config.http.SessionCreationPolicy;
+import org.springframework.security.crypto.factory.PasswordEncoderFactories;
+import org.springframework.security.crypto.password.PasswordEncoder;
 import org.springframework.security.web.SecurityFilterChain;
 import org.springframework.security.web.authentication.UsernamePasswordAuthenticationFilter;
 
@@ -32,32 +34,32 @@ public class SecurityConfiguration{
                  *       SessionCreationPolicy.NEVER       - 스프링시큐리티가 생성하지않지만 기존에 존재하면 사용
                  *       SessionCreationPolicy.STATELESS   - 스프링시큐리티가 생성하지도않고 기존것을 사용하지도 않음
                  */
-                .and()
+            .and()
                 .authorizeRequests()
+                //authorizeRequests() - HttpServletRequest를 사용하겠다
                 .antMatchers("/sign-api/sign-in","/sign-api/sign-up",
                         "/sign-api/exception").permitAll()
                 .antMatchers(HttpMethod.GET, "/product/**").permitAll()
                 .antMatchers("**exception**").permitAll()
+                .anyRequest().hasRole("ADMIN")
                 /*
                  * authorizeRequests() 애플리케이션에 들어오는 요청에 대한 사용 권한 체크
                  * antMatchers() antPattern을 통해 권한을 설정하는 역할
                  */
 
-
-                .anyRequest().hasRole("ADMIN")
-
-                .and()
+            .and()
                 .exceptionHandling().accessDeniedHandler(new CustomAccessDeniedHandler())
                 // 권한 확인 중 예외 발생할 경우 CustomAccessDeniedHandler()로 예외 전달
-                .and()
+            .and()
                 .exceptionHandling().authenticationEntryPoint(new CustomAuthenticationEntryPoint())
                 // 인증 과정 중 예외 발생할 경우 CustomAuthenticationEntryPoint()로 예외 전달
-                .and()
+            .and()
                 .addFilterBefore(new JwtAuthenticationFilter(jwtTokenProvider), UsernamePasswordAuthenticationFilter.class);
         // 필터 등록을 어느 필터 앞에 추가할 것인지 설정한다.
         // JwtAuthenticationFilter를 UsernamePasswordAuthenticationFilter 앞에 추가하겠다는 의미
 
         return httpSecurity.build();
+        
     }
 
     /*
@@ -72,4 +74,11 @@ public class SecurityConfiguration{
                 "/v2/api-docs", "/swagger-resources/**",
                 "/swagger-ui.html","/webjars/**", "sign-api/exception");
     }
+
+    //패스워드 암호화 저장을 위한 빈
+    @Bean
+    public PasswordEncoder passwordEncoder(){
+        return PasswordEncoderFactories.createDelegatingPasswordEncoder();
+    }
+
 }
