@@ -2,6 +2,7 @@ package com.springboot.myfirsttime.member.service.impl;
 
 import com.springboot.myfirsttime.common.CommonResponse;
 import com.springboot.myfirsttime.config.security.JwtTokenProvider;
+import com.springboot.myfirsttime.member.data.dto.Gender;
 import com.springboot.myfirsttime.member.data.dto.SignInResultDto;
 import com.springboot.myfirsttime.member.data.dto.SignUpResultDto;
 import com.springboot.myfirsttime.member.data.entity.User;
@@ -32,7 +33,7 @@ public class SignServiceImpl implements SignService {
 
     // 회원가입 처리 메소드
     @Override
-    public SignUpResultDto signUp(String id, String password, String name, String role,Boolean gender) {
+    public SignUpResultDto signUp(String id, String password, String name, String role, Gender gender) {
         LOGGER.info("[getSignUpResult] 회원가입 정보 전달");
         User user;
         if(role.equalsIgnoreCase("admin")){ // 권한이 관리자일 경우 회원가입
@@ -41,7 +42,7 @@ public class SignServiceImpl implements SignService {
                     .password(passwordEncoder.encode(password))
                     .name(name)
                     .roles(Collections.singletonList("ROLE_ADMIN"))
-                    .gender(gender)
+                    .gender(gender.toBoolean())
                     .build();
         }else{ // // 권한이 일반회원일 경우
             user = User.builder()
@@ -49,7 +50,7 @@ public class SignServiceImpl implements SignService {
                     .password(passwordEncoder.encode(password))
                     .name(name)
                     .roles(Collections.singletonList("ROLE_USER"))
-                    .gender(gender)
+                    .gender(gender.toBoolean())
                     .build();
         }
 

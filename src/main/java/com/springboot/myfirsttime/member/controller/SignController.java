@@ -1,5 +1,6 @@
 package com.springboot.myfirsttime.member.controller;
 
+import com.springboot.myfirsttime.member.data.dto.Gender;
 import com.springboot.myfirsttime.member.data.dto.SignInResultDto;
 import com.springboot.myfirsttime.member.data.dto.SignUpResultDto;
 import com.springboot.myfirsttime.member.service.SignService;
@@ -47,7 +48,7 @@ public class SignController {
         @ApiParam(value="패스워드", required = true) @RequestParam String password,
         @ApiParam(value="이름",required = true) @RequestParam String name,
         @ApiParam(value="권한", required = true) @RequestParam String role,
-        @ApiParam(value="성별",required = true) @RequestParam Boolean gender
+        @ApiParam(value="성별",required = true) @RequestParam Gender gender
     ){
         LOGGER.info("[signUp] 회원가입을 수행합니다. id : {}, password : ****,name : {}, role : {}, gender : {}");
         SignUpResultDto signUpResultDto = signService.signUp(id,password,name,role,gender);
