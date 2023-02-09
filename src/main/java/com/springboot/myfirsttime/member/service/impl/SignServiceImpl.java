@@ -32,7 +32,7 @@ public class SignServiceImpl implements SignService {
 
     // 회원가입 처리 메소드
     @Override
-    public SignUpResultDto signUp(String id, String password, String name, String role) {
+    public SignUpResultDto signUp(String id, String password, String name, String role,Boolean gender) {
         LOGGER.info("[getSignUpResult] 회원가입 정보 전달");
         User user;
         if(role.equalsIgnoreCase("admin")){ // 권한이 관리자일 경우 회원가입
@@ -41,6 +41,7 @@ public class SignServiceImpl implements SignService {
                     .password(passwordEncoder.encode(password))
                     .name(name)
                     .roles(Collections.singletonList("ROLE_ADMIN"))
+                    .gender(gender)
                     .build();
         }else{ // // 권한이 일반회원일 경우
             user = User.builder()
@@ -48,6 +49,7 @@ public class SignServiceImpl implements SignService {
                     .password(passwordEncoder.encode(password))
                     .name(name)
                     .roles(Collections.singletonList("ROLE_USER"))
+                    .gender(gender)
                     .build();
         }
 

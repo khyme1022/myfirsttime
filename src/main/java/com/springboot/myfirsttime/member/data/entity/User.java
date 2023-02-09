@@ -34,8 +34,9 @@ public class User implements UserDetails {
     @Column(nullable = false)
     private String name;
 
+    // true = 남자, false = 여자
     @Column(name = "GENDER", nullable = false, columnDefinition = "TINYINT(4)")
-    private boolean gender;
+    private Boolean gender;
     @ElementCollection(fetch = FetchType.EAGER)
     @Builder.Default
     private List<String> roles = new ArrayList<>();
