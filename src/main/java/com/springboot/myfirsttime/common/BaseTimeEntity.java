@@ -1,4 +1,4 @@
-package com.springboot.myfirsttime.board.data.entity;
+package com.springboot.myfirsttime.common;
 
 import lombok.Getter;
 import org.springframework.data.annotation.CreatedDate;
@@ -13,7 +13,6 @@ import java.time.LocalDateTime;
 @MappedSuperclass // 상속 시 해당 클래스가 이 클래스의 필드를 컬럼으로 인식
 @EntityListeners(AuditingEntityListener.class)
 public class BaseTimeEntity {
-
     @CreatedDate
     private LocalDateTime createdDate;
     @LastModifiedDate
