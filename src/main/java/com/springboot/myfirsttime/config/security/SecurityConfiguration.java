@@ -42,9 +42,12 @@ public class SecurityConfiguration{
                 .antMatchers(HttpMethod.GET, "/product/**").permitAll()
                 .antMatchers("**exception**").permitAll()
                 .anyRequest().hasRole("ADMIN")
+
                 /*
                  * authorizeRequests() 애플리케이션에 들어오는 요청에 대한 사용 권한 체크
                  * antMatchers() antPattern을 통해 권한을 설정하는 역할
+                 * permitAll()
+                 * anyRequest().hasRole("ADMIN") - ADMIN 권한을 가진 사람에게만
                  */
 
             .and()
