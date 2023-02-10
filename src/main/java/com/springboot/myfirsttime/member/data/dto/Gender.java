@@ -12,5 +12,4 @@ public enum Gender {
         this.gender = gender;
     }
 
-    public boolean toBoolean(){return this.gender;}
 }

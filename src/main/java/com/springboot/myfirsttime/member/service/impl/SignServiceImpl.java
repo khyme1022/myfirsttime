@@ -42,7 +42,7 @@ public class SignServiceImpl implements SignService {
                     .password(passwordEncoder.encode(password))
                     .name(name)
                     .roles(Collections.singletonList("ROLE_ADMIN"))
-                    .gender(gender.toBoolean())
+                    .gender(gender.isGender())
                     .build();
         }else{ // // 권한이 일반회원일 경우
             user = User.builder()
@@ -50,7 +50,7 @@ public class SignServiceImpl implements SignService {
                     .password(passwordEncoder.encode(password))
                     .name(name)
                     .roles(Collections.singletonList("ROLE_USER"))
-                    .gender(gender.toBoolean())
+                    .gender(gender.isGender())
                     .build();
         }
 
