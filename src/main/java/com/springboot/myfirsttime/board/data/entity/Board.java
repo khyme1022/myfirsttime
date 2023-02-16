@@ -35,6 +35,10 @@ public class Board extends BaseTimeEntity {
     /* 글 조회 수 */
     @Column(name = "VIEW", nullable = false, columnDefinition = "Integer default 0")
     private int view;
+    /* 파일 루트 */
+    @Column(name = "BOARD_IMG_ROUTE",columnDefinition ="LONGTEXT default NULL" )
+    private String imgRoute;
+
 
 
 }
