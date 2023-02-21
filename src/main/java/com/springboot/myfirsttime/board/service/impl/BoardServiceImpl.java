@@ -56,6 +56,6 @@ public class BoardServiceImpl implements BoardService {
     // 글 삭제 메소드
     @Override
     public void deleteBoard(int boardNum) {
-        boardRepository.updateByNo(false);
+        boardRepository.deleteByNo(boardNum);
     }
 }

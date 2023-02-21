@@ -12,7 +12,7 @@ import javax.transaction.Transactional;
 import java.util.List;
 
 @RestController
-@RequestMapping("/board")
+@RequestMapping("/board-api")
 public class BoardController {
     private final BoardService boardService;
     @Autowired
@@ -62,14 +62,18 @@ public class BoardController {
      *
      */
     @Transactional
-    @PutMapping("/{boardNum")
-    public ResponseEntity<String> updateBaord(
+    @PutMapping("/{boardNum}")
+    public ResponseEntity<String> updateBoard(
             HttpServletRequest request,
             @PathVariable("boardNum") int boardNum){
         boardService.modifyBoard(request,boardNum);
         return ResponseEntity.status(HttpStatus.OK).body("수정 완료");
     }
-
+    /**
+     * 글 삭제 메소드
+     * @param boardNum 글번호
+     * @return String "삭제 완료
+     */
     @Transactional
     @DeleteMapping("/{boardNum}")
     public ResponseEntity<String> deleteBoard(@PathVariable("boardNum") int boardNum)
