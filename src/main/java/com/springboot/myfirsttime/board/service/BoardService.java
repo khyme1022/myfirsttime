@@ -8,8 +8,8 @@ import java.util.List;
 
 public interface BoardService {
     void writeBoard(HttpServletRequest request);
-    List<BoardResponseDto> showBoardList(HttpServletRequest request);
-    BoardResponseDto showBoard(HttpServletRequest request);
-    void modifyBoard(HttpServletRequest request);
-    void deleteBoard(HttpServletRequest request);
+    List<BoardResponseDto> showBoardList(int pageNum);
+    BoardResponseDto showBoard(int boardNum);
+    void modifyBoard(HttpServletRequest request, int boardNum);
+    void deleteBoard(int boardNum);
 }
