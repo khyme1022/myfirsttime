@@ -9,6 +9,16 @@ import org.springframework.data.jpa.domain.support.AuditingEntityListener;
 
 import javax.persistence.*;
 
+
+/**
+ *  no - BOARD_NO
+ *  writer - WRITER
+ *  title - TITLE
+ *  content - CONTENT
+ *  isDelete - IS_DELETE
+ *  view - VIEW
+ *  imgRoute - IMG_ROUTE
+ */
 @Entity(name="BOARD")
 @Getter
 @AllArgsConstructor
@@ -36,7 +46,7 @@ public class Board extends BaseTimeEntity {
     @Column(name = "VIEW", nullable = false, columnDefinition = "Integer default 0")
     private int view;
     /* 파일 루트 */
-    @Column(name = "BOARD_IMG_ROUTE",columnDefinition ="LONGTEXT default NULL" )
+    @Column(name = "IMG_ROUTE",columnDefinition ="LONGTEXT default NULL" )
     private String imgRoute;
 
 
