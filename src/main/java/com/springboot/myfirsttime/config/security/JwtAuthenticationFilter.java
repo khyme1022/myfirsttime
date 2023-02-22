@@ -30,7 +30,7 @@ public class JwtAuthenticationFilter extends OncePerRequestFilter {
         String token = jwtTokenProvider.resolveToken(request);
         LOGGER.info("[doFilterInternal] token 값 추출 완료 , .token : {}", token);
         LOGGER.info("[doFilterInternal] token 값 유효성 체크 시작");
-        if(token != null && jwtTokenProvider.validateToken(token)){
+        if(token != null && jwtTokenProvider.validateToken(token)){ // token이 유효한 토큰일 시에만 유효성 체크
             Authentication authentication = jwtTokenProvider.getAuthentication(token);
             SecurityContextHolder.getContext().setAuthentication(authentication);
             LOGGER.info("[doFilterInternal] token 값 유효성 체크 완료");

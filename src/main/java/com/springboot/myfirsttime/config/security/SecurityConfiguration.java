@@ -39,7 +39,8 @@ public class SecurityConfiguration{
                 //authorizeRequests() - HttpServletRequest를 사용하겠다
                 .antMatchers("/sign-api/sign-in","/sign-api/sign-up",
                         "/sign-api/exception").permitAll()
-                .antMatchers(HttpMethod.GET, "/product/**").permitAll()
+                .antMatchers(HttpMethod.GET, "/board-api/**").permitAll()
+                .antMatchers("/board-api/**").hasRole("USER")
                 .antMatchers("**exception**").permitAll()
                 .anyRequest().hasRole("ADMIN")
 

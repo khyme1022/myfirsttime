@@ -389,3 +389,254 @@ Caused by: org.springframework.data.mapping.PropertyReferenceException: No prope
 [2023-02-22 01:28:10.226] [INFO ] [http-nio-8080-exec-7] com.springboot.myfirsttime.config.security.JwtAuthenticationFilter [doFilterInternal] token 값 추출 완료 , .token : null
 [2023-02-22 01:28:10.226] [INFO ] [http-nio-8080-exec-7] com.springboot.myfirsttime.config.security.JwtAuthenticationFilter [doFilterInternal] token 값 유효성 체크 시작
 [2023-02-22 01:28:10.227] [INFO ] [http-nio-8080-exec-7] com.springboot.myfirsttime.config.security.CustomAuthenticationEntryPoint [commence] 인증 실패로 response.sendError 발생
+[2023-02-22 01:32:44.285] [INFO ] [SpringApplicationShutdownHook] org.springframework.orm.jpa.LocalContainerEntityManagerFactoryBean Closing JPA EntityManagerFactory for persistence unit 'default'
+[2023-02-22 01:32:44.286] [INFO ] [SpringApplicationShutdownHook] com.zaxxer.hikari.HikariDataSource HikariPool-1 - Shutdown initiated...
+[2023-02-22 01:32:44.287] [INFO ] [SpringApplicationShutdownHook] com.zaxxer.hikari.HikariDataSource HikariPool-1 - Shutdown completed.
+[2023-02-22 01:32:47.259] [INFO ] [main] com.springboot.myfirsttime.MyfirsttimeApplication Starting MyfirsttimeApplication using Java 1.8.0_202 on DESKTOP-1U5LA4H with PID 12292 (D:\IntelliJProj\myfirsttime\target\classes started by khyme in D:\IntelliJProj\myfirsttime)
+[2023-02-22 01:32:47.261] [INFO ] [main] com.springboot.myfirsttime.MyfirsttimeApplication No active profile set, falling back to 1 default profile: "default"
+[2023-02-22 01:32:47.767] [INFO ] [main] org.springframework.data.repository.config.RepositoryConfigurationDelegate Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+[2023-02-22 01:32:47.806] [INFO ] [main] org.springframework.data.repository.config.RepositoryConfigurationDelegate Finished Spring Data repository scanning in 34 ms. Found 2 JPA repository interfaces.
+[2023-02-22 01:32:48.222] [INFO ] [main] org.springframework.boot.web.embedded.tomcat.TomcatWebServer Tomcat initialized with port(s): 8080 (http)
+[2023-02-22 01:32:48.229] [INFO ] [main] org.apache.coyote.http11.Http11NioProtocol Initializing ProtocolHandler ["http-nio-8080"]
+[2023-02-22 01:32:48.229] [INFO ] [main] org.apache.catalina.core.StandardService Starting service [Tomcat]
+[2023-02-22 01:32:48.229] [INFO ] [main] org.apache.catalina.core.StandardEngine Starting Servlet engine: [Apache Tomcat/9.0.70]
+[2023-02-22 01:32:48.352] [INFO ] [main] org.apache.catalina.core.ContainerBase.[Tomcat].[localhost].[/] Initializing Spring embedded WebApplicationContext
+[2023-02-22 01:32:48.352] [INFO ] [main] org.springframework.boot.web.servlet.context.ServletWebServerApplicationContext Root WebApplicationContext: initialization completed in 1060 ms
+[2023-02-22 01:32:48.510] [INFO ] [main] org.hibernate.jpa.internal.util.LogHelper HHH000204: Processing PersistenceUnitInfo [name: default]
+[2023-02-22 01:32:48.543] [INFO ] [main] org.hibernate.Version HHH000412: Hibernate ORM core version 5.6.14.Final
+[2023-02-22 01:32:48.652] [INFO ] [main] org.hibernate.annotations.common.Version HCANN000001: Hibernate Commons Annotations {5.1.2.Final}
+[2023-02-22 01:32:48.711] [INFO ] [main] com.zaxxer.hikari.HikariDataSource HikariPool-1 - Starting...
+[2023-02-22 01:32:48.750] [INFO ] [main] com.zaxxer.hikari.HikariDataSource HikariPool-1 - Start completed.
+[2023-02-22 01:32:48.769] [INFO ] [main] org.hibernate.dialect.Dialect HHH000400: Using dialect: org.hibernate.dialect.MariaDB106Dialect
+[2023-02-22 01:32:49.289] [INFO ] [main] org.hibernate.engine.transaction.jta.platform.internal.JtaPlatformInitiator HHH000490: Using JtaPlatform implementation: [org.hibernate.engine.transaction.jta.platform.internal.NoJtaPlatform]
+[2023-02-22 01:32:49.295] [INFO ] [main] org.springframework.orm.jpa.LocalContainerEntityManagerFactoryBean Initialized JPA EntityManagerFactory for persistence unit 'default'
+[2023-02-22 01:32:49.611] [INFO ] [main] com.springboot.myfirsttime.config.security.JwtTokenProvider [init] JwtTokenProvider 내 secretKey 초기화 시작
+[2023-02-22 01:32:49.612] [INFO ] [main] com.springboot.myfirsttime.config.security.JwtTokenProvider [init] JwtTokenProvider 내 secretKey 초기화 완료
+[2023-02-22 01:32:49.734] [WARN ] [main] org.springframework.boot.autoconfigure.orm.jpa.JpaBaseConfiguration$JpaWebConfiguration spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+[2023-02-22 01:32:49.910] [INFO ] [main] springfox.documentation.spring.web.PropertySourcedRequestMappingHandlerMapping Mapped URL path [/v2/api-docs] onto method [springfox.documentation.swagger2.web.Swagger2Controller#getDocumentation(String, HttpServletRequest)]
+[2023-02-22 01:32:50.010] [INFO ] [main] org.springframework.security.web.DefaultSecurityFilterChain Will secure any request with [org.springframework.security.web.session.DisableEncodeUrlFilter@75f8d9b0, org.springframework.security.web.context.request.async.WebAsyncManagerIntegrationFilter@4f7ae05, org.springframework.security.web.context.SecurityContextPersistenceFilter@3684d2c0, org.springframework.security.web.header.HeaderWriterFilter@464a3430, org.springframework.security.web.authentication.logout.LogoutFilter@574218f, com.springboot.myfirsttime.config.security.JwtAuthenticationFilter@1e23ee0e, org.springframework.security.web.savedrequest.RequestCacheAwareFilter@454e9d65, org.springframework.security.web.servletapi.SecurityContextHolderAwareRequestFilter@6807989e, org.springframework.security.web.authentication.AnonymousAuthenticationFilter@b144175, org.springframework.security.web.session.SessionManagementFilter@3a1a0bc, org.springframework.security.web.access.ExceptionTranslationFilter@1ab9c735, org.springframework.security.web.access.intercept.FilterSecurityInterceptor@1468e880]
+[2023-02-22 01:32:50.155] [WARN ] [main] org.springframework.security.config.annotation.web.builders.WebSecurity You are asking Spring Security to ignore Ant [pattern='/v2/api-docs']. This is not recommended -- please use permitAll via HttpSecurity#authorizeHttpRequests instead.
+[2023-02-22 01:32:50.155] [INFO ] [main] org.springframework.security.web.DefaultSecurityFilterChain Will not secure Ant [pattern='/v2/api-docs']
+[2023-02-22 01:32:50.155] [WARN ] [main] org.springframework.security.config.annotation.web.builders.WebSecurity You are asking Spring Security to ignore Ant [pattern='/swagger-resources/**']. This is not recommended -- please use permitAll via HttpSecurity#authorizeHttpRequests instead.
+[2023-02-22 01:32:50.156] [INFO ] [main] org.springframework.security.web.DefaultSecurityFilterChain Will not secure Ant [pattern='/swagger-resources/**']
+[2023-02-22 01:32:50.156] [WARN ] [main] org.springframework.security.config.annotation.web.builders.WebSecurity You are asking Spring Security to ignore Ant [pattern='/swagger-ui.html']. This is not recommended -- please use permitAll via HttpSecurity#authorizeHttpRequests instead.
+[2023-02-22 01:32:50.156] [INFO ] [main] org.springframework.security.web.DefaultSecurityFilterChain Will not secure Ant [pattern='/swagger-ui.html']
+[2023-02-22 01:32:50.156] [WARN ] [main] org.springframework.security.config.annotation.web.builders.WebSecurity You are asking Spring Security to ignore Ant [pattern='/webjars/**']. This is not recommended -- please use permitAll via HttpSecurity#authorizeHttpRequests instead.
+[2023-02-22 01:32:50.156] [INFO ] [main] org.springframework.security.web.DefaultSecurityFilterChain Will not secure Ant [pattern='/webjars/**']
+[2023-02-22 01:32:50.156] [WARN ] [main] org.springframework.security.config.annotation.web.builders.WebSecurity You are asking Spring Security to ignore Ant [pattern='sign-api/exception']. This is not recommended -- please use permitAll via HttpSecurity#authorizeHttpRequests instead.
+[2023-02-22 01:32:50.156] [INFO ] [main] org.springframework.security.web.DefaultSecurityFilterChain Will not secure Ant [pattern='sign-api/exception']
+[2023-02-22 01:32:50.173] [INFO ] [main] org.apache.coyote.http11.Http11NioProtocol Starting ProtocolHandler ["http-nio-8080"]
+[2023-02-22 01:32:50.185] [INFO ] [main] org.springframework.boot.web.embedded.tomcat.TomcatWebServer Tomcat started on port(s): 8080 (http) with context path ''
+[2023-02-22 01:32:50.186] [INFO ] [main] springfox.documentation.spring.web.plugins.DocumentationPluginsBootstrapper Context refreshed
+[2023-02-22 01:32:50.199] [INFO ] [main] springfox.documentation.spring.web.plugins.DocumentationPluginsBootstrapper Found 1 custom documentation plugin(s)
+[2023-02-22 01:32:50.217] [INFO ] [main] springfox.documentation.spring.web.scanners.ApiListingReferenceScanner Scanning for api listing references
+[2023-02-22 01:32:50.304] [INFO ] [main] com.springboot.myfirsttime.MyfirsttimeApplication Started MyfirsttimeApplication in 3.338 seconds (JVM running for 3.641)
+[2023-02-22 01:33:54.953] [INFO ] [SpringApplicationShutdownHook] org.springframework.orm.jpa.LocalContainerEntityManagerFactoryBean Closing JPA EntityManagerFactory for persistence unit 'default'
+[2023-02-22 01:33:54.954] [INFO ] [SpringApplicationShutdownHook] com.zaxxer.hikari.HikariDataSource HikariPool-1 - Shutdown initiated...
+[2023-02-22 01:33:54.956] [INFO ] [SpringApplicationShutdownHook] com.zaxxer.hikari.HikariDataSource HikariPool-1 - Shutdown completed.
+[2023-02-22 17:22:05.895] [INFO ] [main] com.springboot.myfirsttime.MyfirsttimeApplication Starting MyfirsttimeApplication using Java 1.8.0_202 on DESKTOP-1U5LA4H with PID 4760 (D:\IntelliJProj\myfirsttime\target\classes started by khyme in D:\IntelliJProj\myfirsttime)
+[2023-02-22 17:22:05.897] [INFO ] [main] com.springboot.myfirsttime.MyfirsttimeApplication No active profile set, falling back to 1 default profile: "default"
+[2023-02-22 17:22:06.562] [INFO ] [main] org.springframework.data.repository.config.RepositoryConfigurationDelegate Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+[2023-02-22 17:22:06.613] [INFO ] [main] org.springframework.data.repository.config.RepositoryConfigurationDelegate Finished Spring Data repository scanning in 45 ms. Found 2 JPA repository interfaces.
+[2023-02-22 17:22:07.110] [INFO ] [main] org.springframework.boot.web.embedded.tomcat.TomcatWebServer Tomcat initialized with port(s): 8080 (http)
+[2023-02-22 17:22:07.119] [INFO ] [main] org.apache.coyote.http11.Http11NioProtocol Initializing ProtocolHandler ["http-nio-8080"]
+[2023-02-22 17:22:07.119] [INFO ] [main] org.apache.catalina.core.StandardService Starting service [Tomcat]
+[2023-02-22 17:22:07.119] [INFO ] [main] org.apache.catalina.core.StandardEngine Starting Servlet engine: [Apache Tomcat/9.0.70]
+[2023-02-22 17:22:07.263] [INFO ] [main] org.apache.catalina.core.ContainerBase.[Tomcat].[localhost].[/] Initializing Spring embedded WebApplicationContext
+[2023-02-22 17:22:07.263] [INFO ] [main] org.springframework.boot.web.servlet.context.ServletWebServerApplicationContext Root WebApplicationContext: initialization completed in 1335 ms
+[2023-02-22 17:22:07.460] [INFO ] [main] org.hibernate.jpa.internal.util.LogHelper HHH000204: Processing PersistenceUnitInfo [name: default]
+[2023-02-22 17:22:07.511] [INFO ] [main] org.hibernate.Version HHH000412: Hibernate ORM core version 5.6.14.Final
+[2023-02-22 17:22:07.642] [INFO ] [main] org.hibernate.annotations.common.Version HCANN000001: Hibernate Commons Annotations {5.1.2.Final}
+[2023-02-22 17:22:07.727] [INFO ] [main] com.zaxxer.hikari.HikariDataSource HikariPool-1 - Starting...
+[2023-02-22 17:22:07.778] [INFO ] [main] com.zaxxer.hikari.HikariDataSource HikariPool-1 - Start completed.
+[2023-02-22 17:22:07.804] [INFO ] [main] org.hibernate.dialect.Dialect HHH000400: Using dialect: org.hibernate.dialect.MariaDB106Dialect
+[2023-02-22 17:22:08.415] [INFO ] [main] org.hibernate.engine.transaction.jta.platform.internal.JtaPlatformInitiator HHH000490: Using JtaPlatform implementation: [org.hibernate.engine.transaction.jta.platform.internal.NoJtaPlatform]
+[2023-02-22 17:22:08.421] [INFO ] [main] org.springframework.orm.jpa.LocalContainerEntityManagerFactoryBean Initialized JPA EntityManagerFactory for persistence unit 'default'
+[2023-02-22 17:22:08.763] [INFO ] [main] com.springboot.myfirsttime.config.security.JwtTokenProvider [init] JwtTokenProvider 내 secretKey 초기화 시작
+[2023-02-22 17:22:08.763] [INFO ] [main] com.springboot.myfirsttime.config.security.JwtTokenProvider [init] JwtTokenProvider 내 secretKey 초기화 완료
+[2023-02-22 17:22:08.900] [WARN ] [main] org.springframework.boot.autoconfigure.orm.jpa.JpaBaseConfiguration$JpaWebConfiguration spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+[2023-02-22 17:22:09.299] [INFO ] [main] springfox.documentation.spring.web.PropertySourcedRequestMappingHandlerMapping Mapped URL path [/v2/api-docs] onto method [springfox.documentation.swagger2.web.Swagger2Controller#getDocumentation(String, HttpServletRequest)]
+[2023-02-22 17:22:09.409] [INFO ] [main] org.springframework.security.web.DefaultSecurityFilterChain Will secure any request with [org.springframework.security.web.session.DisableEncodeUrlFilter@b144175, org.springframework.security.web.context.request.async.WebAsyncManagerIntegrationFilter@38923cfe, org.springframework.security.web.context.SecurityContextPersistenceFilter@454e9d65, org.springframework.security.web.header.HeaderWriterFilter@6f9a3325, org.springframework.security.web.authentication.logout.LogoutFilter@2d3eecda, com.springboot.myfirsttime.config.security.JwtAuthenticationFilter@1ac3a6f, org.springframework.security.web.savedrequest.RequestCacheAwareFilter@6807989e, org.springframework.security.web.servletapi.SecurityContextHolderAwareRequestFilter@31183ee2, org.springframework.security.web.authentication.AnonymousAuthenticationFilter@fee7ca, org.springframework.security.web.session.SessionManagementFilter@3684d2c0, org.springframework.security.web.access.ExceptionTranslationFilter@464a3430, org.springframework.security.web.access.intercept.FilterSecurityInterceptor@11f9b95a]
+[2023-02-22 17:22:09.561] [WARN ] [main] org.springframework.security.config.annotation.web.builders.WebSecurity You are asking Spring Security to ignore Ant [pattern='/v2/api-docs']. This is not recommended -- please use permitAll via HttpSecurity#authorizeHttpRequests instead.
+[2023-02-22 17:22:09.561] [INFO ] [main] org.springframework.security.web.DefaultSecurityFilterChain Will not secure Ant [pattern='/v2/api-docs']
+[2023-02-22 17:22:09.561] [WARN ] [main] org.springframework.security.config.annotation.web.builders.WebSecurity You are asking Spring Security to ignore Ant [pattern='/swagger-resources/**']. This is not recommended -- please use permitAll via HttpSecurity#authorizeHttpRequests instead.
+[2023-02-22 17:22:09.562] [INFO ] [main] org.springframework.security.web.DefaultSecurityFilterChain Will not secure Ant [pattern='/swagger-resources/**']
+[2023-02-22 17:22:09.562] [WARN ] [main] org.springframework.security.config.annotation.web.builders.WebSecurity You are asking Spring Security to ignore Ant [pattern='/swagger-ui.html']. This is not recommended -- please use permitAll via HttpSecurity#authorizeHttpRequests instead.
+[2023-02-22 17:22:09.562] [INFO ] [main] org.springframework.security.web.DefaultSecurityFilterChain Will not secure Ant [pattern='/swagger-ui.html']
+[2023-02-22 17:22:09.562] [WARN ] [main] org.springframework.security.config.annotation.web.builders.WebSecurity You are asking Spring Security to ignore Ant [pattern='/webjars/**']. This is not recommended -- please use permitAll via HttpSecurity#authorizeHttpRequests instead.
+[2023-02-22 17:22:09.562] [INFO ] [main] org.springframework.security.web.DefaultSecurityFilterChain Will not secure Ant [pattern='/webjars/**']
+[2023-02-22 17:22:09.562] [WARN ] [main] org.springframework.security.config.annotation.web.builders.WebSecurity You are asking Spring Security to ignore Ant [pattern='sign-api/exception']. This is not recommended -- please use permitAll via HttpSecurity#authorizeHttpRequests instead.
+[2023-02-22 17:22:09.562] [INFO ] [main] org.springframework.security.web.DefaultSecurityFilterChain Will not secure Ant [pattern='sign-api/exception']
+[2023-02-22 17:22:09.580] [INFO ] [main] org.apache.coyote.http11.Http11NioProtocol Starting ProtocolHandler ["http-nio-8080"]
+[2023-02-22 17:22:09.594] [INFO ] [main] org.springframework.boot.web.embedded.tomcat.TomcatWebServer Tomcat started on port(s): 8080 (http) with context path ''
+[2023-02-22 17:22:09.594] [INFO ] [main] springfox.documentation.spring.web.plugins.DocumentationPluginsBootstrapper Context refreshed
+[2023-02-22 17:22:09.609] [INFO ] [main] springfox.documentation.spring.web.plugins.DocumentationPluginsBootstrapper Found 1 custom documentation plugin(s)
+[2023-02-22 17:22:09.629] [INFO ] [main] springfox.documentation.spring.web.scanners.ApiListingReferenceScanner Scanning for api listing references
+[2023-02-22 17:22:09.722] [INFO ] [main] com.springboot.myfirsttime.MyfirsttimeApplication Started MyfirsttimeApplication in 4.22 seconds (JVM running for 4.656)
+[2023-02-22 17:36:35.084] [INFO ] [SpringApplicationShutdownHook] org.springframework.orm.jpa.LocalContainerEntityManagerFactoryBean Closing JPA EntityManagerFactory for persistence unit 'default'
+[2023-02-22 17:36:35.085] [INFO ] [SpringApplicationShutdownHook] com.zaxxer.hikari.HikariDataSource HikariPool-1 - Shutdown initiated...
+[2023-02-22 17:36:35.087] [INFO ] [SpringApplicationShutdownHook] com.zaxxer.hikari.HikariDataSource HikariPool-1 - Shutdown completed.
+[2023-02-22 17:36:57.489] [INFO ] [main] com.springboot.myfirsttime.MyfirsttimeApplication Starting MyfirsttimeApplication using Java 1.8.0_202 on DESKTOP-1U5LA4H with PID 12672 (D:\IntelliJProj\myfirsttime\target\classes started by khyme in D:\IntelliJProj\myfirsttime)
+[2023-02-22 17:36:57.492] [INFO ] [main] com.springboot.myfirsttime.MyfirsttimeApplication No active profile set, falling back to 1 default profile: "default"
+[2023-02-22 17:36:58.280] [INFO ] [main] org.springframework.data.repository.config.RepositoryConfigurationDelegate Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+[2023-02-22 17:36:58.335] [INFO ] [main] org.springframework.data.repository.config.RepositoryConfigurationDelegate Finished Spring Data repository scanning in 48 ms. Found 2 JPA repository interfaces.
+[2023-02-22 17:36:58.844] [INFO ] [main] org.springframework.boot.web.embedded.tomcat.TomcatWebServer Tomcat initialized with port(s): 8080 (http)
+[2023-02-22 17:36:58.853] [INFO ] [main] org.apache.coyote.http11.Http11NioProtocol Initializing ProtocolHandler ["http-nio-8080"]
+[2023-02-22 17:36:58.853] [INFO ] [main] org.apache.catalina.core.StandardService Starting service [Tomcat]
+[2023-02-22 17:36:58.853] [INFO ] [main] org.apache.catalina.core.StandardEngine Starting Servlet engine: [Apache Tomcat/9.0.70]
+[2023-02-22 17:36:58.989] [INFO ] [main] org.apache.catalina.core.ContainerBase.[Tomcat].[localhost].[/] Initializing Spring embedded WebApplicationContext
+[2023-02-22 17:36:58.989] [INFO ] [main] org.springframework.boot.web.servlet.context.ServletWebServerApplicationContext Root WebApplicationContext: initialization completed in 1431 ms
+[2023-02-22 17:36:59.156] [INFO ] [main] org.hibernate.jpa.internal.util.LogHelper HHH000204: Processing PersistenceUnitInfo [name: default]
+[2023-02-22 17:36:59.191] [INFO ] [main] org.hibernate.Version HHH000412: Hibernate ORM core version 5.6.14.Final
+[2023-02-22 17:36:59.303] [INFO ] [main] org.hibernate.annotations.common.Version HCANN000001: Hibernate Commons Annotations {5.1.2.Final}
+[2023-02-22 17:36:59.362] [INFO ] [main] com.zaxxer.hikari.HikariDataSource HikariPool-1 - Starting...
+[2023-02-22 17:36:59.402] [INFO ] [main] com.zaxxer.hikari.HikariDataSource HikariPool-1 - Start completed.
+[2023-02-22 17:36:59.422] [INFO ] [main] org.hibernate.dialect.Dialect HHH000400: Using dialect: org.hibernate.dialect.MariaDB106Dialect
+[2023-02-22 17:36:59.944] [INFO ] [main] org.hibernate.engine.transaction.jta.platform.internal.JtaPlatformInitiator HHH000490: Using JtaPlatform implementation: [org.hibernate.engine.transaction.jta.platform.internal.NoJtaPlatform]
+[2023-02-22 17:36:59.950] [INFO ] [main] org.springframework.orm.jpa.LocalContainerEntityManagerFactoryBean Initialized JPA EntityManagerFactory for persistence unit 'default'
+[2023-02-22 17:37:00.264] [INFO ] [main] com.springboot.myfirsttime.config.security.JwtTokenProvider [init] JwtTokenProvider 내 secretKey 초기화 시작
+[2023-02-22 17:37:00.264] [INFO ] [main] com.springboot.myfirsttime.config.security.JwtTokenProvider [init] JwtTokenProvider 내 secretKey 초기화 완료
+[2023-02-22 17:37:00.404] [WARN ] [main] org.springframework.boot.autoconfigure.orm.jpa.JpaBaseConfiguration$JpaWebConfiguration spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+[2023-02-22 17:37:00.620] [INFO ] [main] springfox.documentation.spring.web.PropertySourcedRequestMappingHandlerMapping Mapped URL path [/v2/api-docs] onto method [springfox.documentation.swagger2.web.Swagger2Controller#getDocumentation(String, HttpServletRequest)]
+[2023-02-22 17:37:00.715] [INFO ] [main] org.springframework.security.web.DefaultSecurityFilterChain Will secure any request with [org.springframework.security.web.session.DisableEncodeUrlFilter@38923cfe, org.springframework.security.web.context.request.async.WebAsyncManagerIntegrationFilter@1ac3a6f, org.springframework.security.web.context.SecurityContextPersistenceFilter@7805478c, org.springframework.security.web.header.HeaderWriterFilter@72ceafeb, org.springframework.security.web.authentication.logout.LogoutFilter@236a4d30, com.springboot.myfirsttime.config.security.JwtAuthenticationFilter@fee7ca, org.springframework.security.web.savedrequest.RequestCacheAwareFilter@c2e33, org.springframework.security.web.servletapi.SecurityContextHolderAwareRequestFilter@63f3366a, org.springframework.security.web.authentication.AnonymousAuthenticationFilter@29c80149, org.springframework.security.web.session.SessionManagementFilter@4be460e5, org.springframework.security.web.access.ExceptionTranslationFilter@3bcedb06, org.springframework.security.web.access.intercept.FilterSecurityInterceptor@42066f0d]
+[2023-02-22 17:37:00.861] [WARN ] [main] org.springframework.security.config.annotation.web.builders.WebSecurity You are asking Spring Security to ignore Ant [pattern='/v2/api-docs']. This is not recommended -- please use permitAll via HttpSecurity#authorizeHttpRequests instead.
+[2023-02-22 17:37:00.862] [INFO ] [main] org.springframework.security.web.DefaultSecurityFilterChain Will not secure Ant [pattern='/v2/api-docs']
+[2023-02-22 17:37:00.862] [WARN ] [main] org.springframework.security.config.annotation.web.builders.WebSecurity You are asking Spring Security to ignore Ant [pattern='/swagger-resources/**']. This is not recommended -- please use permitAll via HttpSecurity#authorizeHttpRequests instead.
+[2023-02-22 17:37:00.862] [INFO ] [main] org.springframework.security.web.DefaultSecurityFilterChain Will not secure Ant [pattern='/swagger-resources/**']
+[2023-02-22 17:37:00.862] [WARN ] [main] org.springframework.security.config.annotation.web.builders.WebSecurity You are asking Spring Security to ignore Ant [pattern='/swagger-ui.html']. This is not recommended -- please use permitAll via HttpSecurity#authorizeHttpRequests instead.
+[2023-02-22 17:37:00.862] [INFO ] [main] org.springframework.security.web.DefaultSecurityFilterChain Will not secure Ant [pattern='/swagger-ui.html']
+[2023-02-22 17:37:00.862] [WARN ] [main] org.springframework.security.config.annotation.web.builders.WebSecurity You are asking Spring Security to ignore Ant [pattern='/webjars/**']. This is not recommended -- please use permitAll via HttpSecurity#authorizeHttpRequests instead.
+[2023-02-22 17:37:00.862] [INFO ] [main] org.springframework.security.web.DefaultSecurityFilterChain Will not secure Ant [pattern='/webjars/**']
+[2023-02-22 17:37:00.862] [WARN ] [main] org.springframework.security.config.annotation.web.builders.WebSecurity You are asking Spring Security to ignore Ant [pattern='sign-api/exception']. This is not recommended -- please use permitAll via HttpSecurity#authorizeHttpRequests instead.
+[2023-02-22 17:37:00.862] [INFO ] [main] org.springframework.security.web.DefaultSecurityFilterChain Will not secure Ant [pattern='sign-api/exception']
+[2023-02-22 17:37:00.882] [INFO ] [main] org.apache.coyote.http11.Http11NioProtocol Starting ProtocolHandler ["http-nio-8080"]
+[2023-02-22 17:37:00.895] [INFO ] [main] org.springframework.boot.web.embedded.tomcat.TomcatWebServer Tomcat started on port(s): 8080 (http) with context path ''
+[2023-02-22 17:37:00.896] [INFO ] [main] springfox.documentation.spring.web.plugins.DocumentationPluginsBootstrapper Context refreshed
+[2023-02-22 17:37:00.910] [INFO ] [main] springfox.documentation.spring.web.plugins.DocumentationPluginsBootstrapper Found 1 custom documentation plugin(s)
+[2023-02-22 17:37:00.933] [INFO ] [main] springfox.documentation.spring.web.scanners.ApiListingReferenceScanner Scanning for api listing references
+[2023-02-22 17:37:01.030] [INFO ] [main] com.springboot.myfirsttime.MyfirsttimeApplication Started MyfirsttimeApplication in 3.892 seconds (JVM running for 4.227)
+[2023-02-22 17:37:17.609] [INFO ] [http-nio-8080-exec-1] org.apache.catalina.core.ContainerBase.[Tomcat].[localhost].[/] Initializing Spring DispatcherServlet 'dispatcherServlet'
+[2023-02-22 17:37:17.609] [INFO ] [http-nio-8080-exec-1] org.springframework.web.servlet.DispatcherServlet Initializing Servlet 'dispatcherServlet'
+[2023-02-22 17:37:17.611] [INFO ] [http-nio-8080-exec-1] org.springframework.web.servlet.DispatcherServlet Completed initialization in 2 ms
+[2023-02-22 17:37:17.623] [INFO ] [http-nio-8080-exec-1] com.springboot.myfirsttime.config.security.JwtTokenProvider [resolveToken] HTTP 헤더에서 Token 값 추출
+[2023-02-22 17:37:17.623] [INFO ] [http-nio-8080-exec-1] com.springboot.myfirsttime.config.security.JwtAuthenticationFilter [doFilterInternal] token 값 추출 완료 , .token : null
+[2023-02-22 17:37:17.623] [INFO ] [http-nio-8080-exec-1] com.springboot.myfirsttime.config.security.JwtAuthenticationFilter [doFilterInternal] token 값 유효성 체크 시작
+[2023-02-22 17:37:17.630] [INFO ] [http-nio-8080-exec-1] com.springboot.myfirsttime.config.security.CustomAuthenticationEntryPoint [commence] 인증 실패로 response.sendError 발생
+[2023-02-22 17:44:40.772] [INFO ] [http-nio-8080-exec-4] com.springboot.myfirsttime.config.security.JwtTokenProvider [resolveToken] HTTP 헤더에서 Token 값 추출
+[2023-02-22 17:44:40.772] [INFO ] [http-nio-8080-exec-4] com.springboot.myfirsttime.config.security.JwtAuthenticationFilter [doFilterInternal] token 값 추출 완료 , .token : null
+[2023-02-22 17:44:40.772] [INFO ] [http-nio-8080-exec-4] com.springboot.myfirsttime.config.security.JwtAuthenticationFilter [doFilterInternal] token 값 유효성 체크 시작
+[2023-02-22 17:44:40.796] [INFO ] [http-nio-8080-exec-4] com.springboot.myfirsttime.member.controller.SignController [signUp] 회원가입을 수행합니다. id : {}, password : ****,name : {}, role : {}, gender : {}
+[2023-02-22 17:44:40.796] [INFO ] [http-nio-8080-exec-4] com.springboot.myfirsttime.member.service.impl.SignServiceImpl [SignUp] 회원가입 정보 전달
+[2023-02-22 17:44:40.921] [INFO ] [http-nio-8080-exec-4] com.springboot.myfirsttime.member.service.impl.SignServiceImpl [SignUp] userEntity 값이 들어왔는지 확인 후 결과값 주입
+[2023-02-22 17:44:40.921] [INFO ] [http-nio-8080-exec-4] com.springboot.myfirsttime.member.service.impl.SignServiceImpl [SignUp] 정상처리 완료
+[2023-02-22 17:44:40.921] [INFO ] [http-nio-8080-exec-4] com.springboot.myfirsttime.member.controller.SignController [signUp] 회원가입 완료
+[2023-02-22 17:45:55.374] [INFO ] [http-nio-8080-exec-6] com.springboot.myfirsttime.config.security.JwtTokenProvider [resolveToken] HTTP 헤더에서 Token 값 추출
+[2023-02-22 17:45:55.374] [INFO ] [http-nio-8080-exec-6] com.springboot.myfirsttime.config.security.JwtAuthenticationFilter [doFilterInternal] token 값 추출 완료 , .token : null
+[2023-02-22 17:45:55.374] [INFO ] [http-nio-8080-exec-6] com.springboot.myfirsttime.config.security.JwtAuthenticationFilter [doFilterInternal] token 값 유효성 체크 시작
+[2023-02-22 17:45:55.384] [WARN ] [http-nio-8080-exec-6] org.springframework.web.servlet.mvc.support.DefaultHandlerExceptionResolver Resolved [org.springframework.web.HttpRequestMethodNotSupportedException: Request method 'GET' not supported]
+[2023-02-22 17:45:59.120] [INFO ] [http-nio-8080-exec-7] com.springboot.myfirsttime.config.security.JwtTokenProvider [resolveToken] HTTP 헤더에서 Token 값 추출
+[2023-02-22 17:45:59.120] [INFO ] [http-nio-8080-exec-7] com.springboot.myfirsttime.config.security.JwtAuthenticationFilter [doFilterInternal] token 값 추출 완료 , .token : null
+[2023-02-22 17:45:59.120] [INFO ] [http-nio-8080-exec-7] com.springboot.myfirsttime.config.security.JwtAuthenticationFilter [doFilterInternal] token 값 유효성 체크 시작
+[2023-02-22 17:45:59.120] [WARN ] [http-nio-8080-exec-7] org.springframework.web.servlet.mvc.support.DefaultHandlerExceptionResolver Resolved [org.springframework.web.HttpRequestMethodNotSupportedException: Request method 'GET' not supported]
+[2023-02-22 17:46:11.782] [INFO ] [http-nio-8080-exec-8] com.springboot.myfirsttime.config.security.JwtTokenProvider [resolveToken] HTTP 헤더에서 Token 값 추출
+[2023-02-22 17:46:11.782] [INFO ] [http-nio-8080-exec-8] com.springboot.myfirsttime.config.security.JwtAuthenticationFilter [doFilterInternal] token 값 추출 완료 , .token : null
+[2023-02-22 17:46:11.782] [INFO ] [http-nio-8080-exec-8] com.springboot.myfirsttime.config.security.JwtAuthenticationFilter [doFilterInternal] token 값 유효성 체크 시작
+[2023-02-22 17:46:11.783] [WARN ] [http-nio-8080-exec-8] org.springframework.web.servlet.mvc.support.DefaultHandlerExceptionResolver Resolved [org.springframework.web.HttpRequestMethodNotSupportedException: Request method 'GET' not supported]
+[2023-02-22 17:46:40.665] [INFO ] [http-nio-8080-exec-9] com.springboot.myfirsttime.config.security.JwtTokenProvider [resolveToken] HTTP 헤더에서 Token 값 추출
+[2023-02-22 17:46:40.666] [INFO ] [http-nio-8080-exec-9] com.springboot.myfirsttime.config.security.JwtAuthenticationFilter [doFilterInternal] token 값 추출 완료 , .token : null
+[2023-02-22 17:46:40.666] [INFO ] [http-nio-8080-exec-9] com.springboot.myfirsttime.config.security.JwtAuthenticationFilter [doFilterInternal] token 값 유효성 체크 시작
+[2023-02-22 17:46:40.666] [INFO ] [http-nio-8080-exec-9] com.springboot.myfirsttime.member.controller.SignController [signUp] 회원가입을 수행합니다. id : {}, password : ****,name : {}, role : {}, gender : {}
+[2023-02-22 17:46:40.666] [INFO ] [http-nio-8080-exec-9] com.springboot.myfirsttime.member.service.impl.SignServiceImpl [SignUp] 회원가입 정보 전달
+[2023-02-22 17:46:40.720] [WARN ] [http-nio-8080-exec-9] org.mariadb.jdbc.message.server.ErrorPacket Error: 1062-23000: Duplicate entry 'kim1022' for key 'UK_a7hlm8sj8kmijx6ucp7wfyt31'
+[2023-02-22 17:46:40.720] [WARN ] [http-nio-8080-exec-9] org.hibernate.engine.jdbc.spi.SqlExceptionHelper SQL Error: 1062, SQLState: 23000
+[2023-02-22 17:46:40.720] [ERROR] [http-nio-8080-exec-9] org.hibernate.engine.jdbc.spi.SqlExceptionHelper (conn=108) Duplicate entry 'kim1022' for key 'UK_a7hlm8sj8kmijx6ucp7wfyt31'
+[2023-02-22 17:46:40.725] [ERROR] [http-nio-8080-exec-9] com.springboot.myfirsttime.member.controller.SignController ExceptionHandler 호출, org.hibernate.exception.ConstraintViolationException: could not execute statement,could not execute statement; SQL [n/a]; constraint [UK_a7hlm8sj8kmijx6ucp7wfyt31]; nested exception is org.hibernate.exception.ConstraintViolationException: could not execute statement
+[2023-02-22 17:46:57.033] [INFO ] [http-nio-8080-exec-1] com.springboot.myfirsttime.config.security.JwtTokenProvider [resolveToken] HTTP 헤더에서 Token 값 추출
+[2023-02-22 17:46:57.033] [INFO ] [http-nio-8080-exec-1] com.springboot.myfirsttime.config.security.JwtAuthenticationFilter [doFilterInternal] token 값 추출 완료 , .token : null
+[2023-02-22 17:46:57.033] [INFO ] [http-nio-8080-exec-1] com.springboot.myfirsttime.config.security.JwtAuthenticationFilter [doFilterInternal] token 값 유효성 체크 시작
+[2023-02-22 17:46:57.034] [WARN ] [http-nio-8080-exec-1] org.springframework.web.servlet.mvc.support.DefaultHandlerExceptionResolver Resolved [org.springframework.web.HttpRequestMethodNotSupportedException: Request method 'GET' not supported]
+[2023-02-22 17:47:33.648] [INFO ] [http-nio-8080-exec-2] com.springboot.myfirsttime.config.security.JwtTokenProvider [resolveToken] HTTP 헤더에서 Token 값 추출
+[2023-02-22 17:47:33.648] [INFO ] [http-nio-8080-exec-2] com.springboot.myfirsttime.config.security.JwtAuthenticationFilter [doFilterInternal] token 값 추출 완료 , .token : null
+[2023-02-22 17:47:33.648] [INFO ] [http-nio-8080-exec-2] com.springboot.myfirsttime.config.security.JwtAuthenticationFilter [doFilterInternal] token 값 유효성 체크 시작
+[2023-02-22 17:47:33.649] [WARN ] [http-nio-8080-exec-2] org.springframework.web.servlet.mvc.support.DefaultHandlerExceptionResolver Resolved [org.springframework.web.HttpRequestMethodNotSupportedException: Request method 'GET' not supported]
+[2023-02-22 17:54:00.262] [INFO ] [SpringApplicationShutdownHook] org.springframework.orm.jpa.LocalContainerEntityManagerFactoryBean Closing JPA EntityManagerFactory for persistence unit 'default'
+[2023-02-22 17:54:00.263] [INFO ] [SpringApplicationShutdownHook] com.zaxxer.hikari.HikariDataSource HikariPool-1 - Shutdown initiated...
+[2023-02-22 17:54:00.264] [INFO ] [SpringApplicationShutdownHook] com.zaxxer.hikari.HikariDataSource HikariPool-1 - Shutdown completed.
+[2023-02-22 17:54:10.149] [INFO ] [main] com.springboot.myfirsttime.MyfirsttimeApplication Starting MyfirsttimeApplication using Java 1.8.0_202 on DESKTOP-1U5LA4H with PID 13768 (D:\IntelliJProj\myfirsttime\target\classes started by khyme in D:\IntelliJProj\myfirsttime)
+[2023-02-22 17:54:10.151] [INFO ] [main] com.springboot.myfirsttime.MyfirsttimeApplication No active profile set, falling back to 1 default profile: "default"
+[2023-02-22 17:54:10.657] [INFO ] [main] org.springframework.data.repository.config.RepositoryConfigurationDelegate Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+[2023-02-22 17:54:10.698] [INFO ] [main] org.springframework.data.repository.config.RepositoryConfigurationDelegate Finished Spring Data repository scanning in 36 ms. Found 2 JPA repository interfaces.
+[2023-02-22 17:54:11.119] [INFO ] [main] org.springframework.boot.web.embedded.tomcat.TomcatWebServer Tomcat initialized with port(s): 8080 (http)
+[2023-02-22 17:54:11.126] [INFO ] [main] org.apache.coyote.http11.Http11NioProtocol Initializing ProtocolHandler ["http-nio-8080"]
+[2023-02-22 17:54:11.126] [INFO ] [main] org.apache.catalina.core.StandardService Starting service [Tomcat]
+[2023-02-22 17:54:11.126] [INFO ] [main] org.apache.catalina.core.StandardEngine Starting Servlet engine: [Apache Tomcat/9.0.70]
+[2023-02-22 17:54:11.242] [INFO ] [main] org.apache.catalina.core.ContainerBase.[Tomcat].[localhost].[/] Initializing Spring embedded WebApplicationContext
+[2023-02-22 17:54:11.243] [INFO ] [main] org.springframework.boot.web.servlet.context.ServletWebServerApplicationContext Root WebApplicationContext: initialization completed in 1063 ms
+[2023-02-22 17:54:11.390] [INFO ] [main] org.hibernate.jpa.internal.util.LogHelper HHH000204: Processing PersistenceUnitInfo [name: default]
+[2023-02-22 17:54:11.421] [INFO ] [main] org.hibernate.Version HHH000412: Hibernate ORM core version 5.6.14.Final
+[2023-02-22 17:54:11.524] [INFO ] [main] org.hibernate.annotations.common.Version HCANN000001: Hibernate Commons Annotations {5.1.2.Final}
+[2023-02-22 17:54:11.583] [INFO ] [main] com.zaxxer.hikari.HikariDataSource HikariPool-1 - Starting...
+[2023-02-22 17:54:11.622] [INFO ] [main] com.zaxxer.hikari.HikariDataSource HikariPool-1 - Start completed.
+[2023-02-22 17:54:11.641] [INFO ] [main] org.hibernate.dialect.Dialect HHH000400: Using dialect: org.hibernate.dialect.MariaDB106Dialect
+[2023-02-22 17:54:12.135] [INFO ] [main] org.hibernate.engine.transaction.jta.platform.internal.JtaPlatformInitiator HHH000490: Using JtaPlatform implementation: [org.hibernate.engine.transaction.jta.platform.internal.NoJtaPlatform]
+[2023-02-22 17:54:12.140] [INFO ] [main] org.springframework.orm.jpa.LocalContainerEntityManagerFactoryBean Initialized JPA EntityManagerFactory for persistence unit 'default'
+[2023-02-22 17:54:12.445] [INFO ] [main] com.springboot.myfirsttime.config.security.JwtTokenProvider [init] JwtTokenProvider 내 secretKey 초기화 시작
+[2023-02-22 17:54:12.445] [INFO ] [main] com.springboot.myfirsttime.config.security.JwtTokenProvider [init] JwtTokenProvider 내 secretKey 초기화 완료
+[2023-02-22 17:54:12.583] [WARN ] [main] org.springframework.boot.autoconfigure.orm.jpa.JpaBaseConfiguration$JpaWebConfiguration spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+[2023-02-22 17:54:12.762] [INFO ] [main] springfox.documentation.spring.web.PropertySourcedRequestMappingHandlerMapping Mapped URL path [/v2/api-docs] onto method [springfox.documentation.swagger2.web.Swagger2Controller#getDocumentation(String, HttpServletRequest)]
+[2023-02-22 17:54:12.859] [INFO ] [main] org.springframework.security.web.DefaultSecurityFilterChain Will secure any request with [org.springframework.security.web.session.DisableEncodeUrlFilter@b144175, org.springframework.security.web.context.request.async.WebAsyncManagerIntegrationFilter@38923cfe, org.springframework.security.web.context.SecurityContextPersistenceFilter@454e9d65, org.springframework.security.web.header.HeaderWriterFilter@6f9a3325, org.springframework.security.web.authentication.logout.LogoutFilter@2d3eecda, com.springboot.myfirsttime.config.security.JwtAuthenticationFilter@1ac3a6f, org.springframework.security.web.savedrequest.RequestCacheAwareFilter@6807989e, org.springframework.security.web.servletapi.SecurityContextHolderAwareRequestFilter@31183ee2, org.springframework.security.web.authentication.AnonymousAuthenticationFilter@fee7ca, org.springframework.security.web.session.SessionManagementFilter@3684d2c0, org.springframework.security.web.access.ExceptionTranslationFilter@464a3430, org.springframework.security.web.access.intercept.FilterSecurityInterceptor@11f9b95a]
+[2023-02-22 17:54:13.007] [WARN ] [main] org.springframework.security.config.annotation.web.builders.WebSecurity You are asking Spring Security to ignore Ant [pattern='/v2/api-docs']. This is not recommended -- please use permitAll via HttpSecurity#authorizeHttpRequests instead.
+[2023-02-22 17:54:13.008] [INFO ] [main] org.springframework.security.web.DefaultSecurityFilterChain Will not secure Ant [pattern='/v2/api-docs']
+[2023-02-22 17:54:13.008] [WARN ] [main] org.springframework.security.config.annotation.web.builders.WebSecurity You are asking Spring Security to ignore Ant [pattern='/swagger-resources/**']. This is not recommended -- please use permitAll via HttpSecurity#authorizeHttpRequests instead.
+[2023-02-22 17:54:13.008] [INFO ] [main] org.springframework.security.web.DefaultSecurityFilterChain Will not secure Ant [pattern='/swagger-resources/**']
+[2023-02-22 17:54:13.008] [WARN ] [main] org.springframework.security.config.annotation.web.builders.WebSecurity You are asking Spring Security to ignore Ant [pattern='/swagger-ui.html']. This is not recommended -- please use permitAll via HttpSecurity#authorizeHttpRequests instead.
+[2023-02-22 17:54:13.008] [INFO ] [main] org.springframework.security.web.DefaultSecurityFilterChain Will not secure Ant [pattern='/swagger-ui.html']
+[2023-02-22 17:54:13.008] [WARN ] [main] org.springframework.security.config.annotation.web.builders.WebSecurity You are asking Spring Security to ignore Ant [pattern='/webjars/**']. This is not recommended -- please use permitAll via HttpSecurity#authorizeHttpRequests instead.
+[2023-02-22 17:54:13.008] [INFO ] [main] org.springframework.security.web.DefaultSecurityFilterChain Will not secure Ant [pattern='/webjars/**']
+[2023-02-22 17:54:13.008] [WARN ] [main] org.springframework.security.config.annotation.web.builders.WebSecurity You are asking Spring Security to ignore Ant [pattern='sign-api/exception']. This is not recommended -- please use permitAll via HttpSecurity#authorizeHttpRequests instead.
+[2023-02-22 17:54:13.008] [INFO ] [main] org.springframework.security.web.DefaultSecurityFilterChain Will not secure Ant [pattern='sign-api/exception']
+[2023-02-22 17:54:13.030] [INFO ] [main] org.apache.coyote.http11.Http11NioProtocol Starting ProtocolHandler ["http-nio-8080"]
+[2023-02-22 17:54:13.042] [INFO ] [main] org.springframework.boot.web.embedded.tomcat.TomcatWebServer Tomcat started on port(s): 8080 (http) with context path ''
+[2023-02-22 17:54:13.043] [INFO ] [main] springfox.documentation.spring.web.plugins.DocumentationPluginsBootstrapper Context refreshed
+[2023-02-22 17:54:13.056] [INFO ] [main] springfox.documentation.spring.web.plugins.DocumentationPluginsBootstrapper Found 1 custom documentation plugin(s)
+[2023-02-22 17:54:13.075] [INFO ] [main] springfox.documentation.spring.web.scanners.ApiListingReferenceScanner Scanning for api listing references
+[2023-02-22 17:54:13.159] [INFO ] [main] com.springboot.myfirsttime.MyfirsttimeApplication Started MyfirsttimeApplication in 3.3 seconds (JVM running for 3.644)
+[2023-02-22 17:54:17.833] [INFO ] [http-nio-8080-exec-1] org.apache.catalina.core.ContainerBase.[Tomcat].[localhost].[/] Initializing Spring DispatcherServlet 'dispatcherServlet'
+[2023-02-22 17:54:17.834] [INFO ] [http-nio-8080-exec-1] org.springframework.web.servlet.DispatcherServlet Initializing Servlet 'dispatcherServlet'
+[2023-02-22 17:54:17.835] [INFO ] [http-nio-8080-exec-1] org.springframework.web.servlet.DispatcherServlet Completed initialization in 1 ms
+[2023-02-22 17:54:17.844] [INFO ] [http-nio-8080-exec-1] com.springboot.myfirsttime.config.security.JwtTokenProvider [resolveToken] HTTP 헤더에서 Token 값 추출
+[2023-02-22 17:54:17.844] [INFO ] [http-nio-8080-exec-1] com.springboot.myfirsttime.config.security.JwtAuthenticationFilter [doFilterInternal] token 값 추출 완료 , .token : null
+[2023-02-22 17:54:17.845] [INFO ] [http-nio-8080-exec-1] com.springboot.myfirsttime.config.security.JwtAuthenticationFilter [doFilterInternal] token 값 유효성 체크 시작
+[2023-02-22 17:54:17.868] [INFO ] [http-nio-8080-exec-1] com.springboot.myfirsttime.member.controller.SignController [signUp] 회원가입을 수행합니다. id : {}, password : ****,name : {}, role : {}, gender : {}
+[2023-02-22 17:54:17.868] [INFO ] [http-nio-8080-exec-1] com.springboot.myfirsttime.member.service.impl.SignServiceImpl [SignUp] 회원가입 정보 전달
+[2023-02-22 17:54:17.988] [INFO ] [http-nio-8080-exec-1] com.springboot.myfirsttime.member.service.impl.SignServiceImpl [SignUp] userEntity 값이 들어왔는지 확인 후 결과값 주입
+[2023-02-22 17:54:17.988] [INFO ] [http-nio-8080-exec-1] com.springboot.myfirsttime.member.service.impl.SignServiceImpl [SignUp] 정상처리 완료
+[2023-02-22 17:54:17.989] [INFO ] [http-nio-8080-exec-1] com.springboot.myfirsttime.member.controller.SignController [signUp] 회원가입 완료
+[2023-02-22 17:55:20.132] [INFO ] [http-nio-8080-exec-5] com.springboot.myfirsttime.config.security.JwtTokenProvider [resolveToken] HTTP 헤더에서 Token 값 추출
+[2023-02-22 17:55:20.132] [INFO ] [http-nio-8080-exec-5] com.springboot.myfirsttime.config.security.JwtAuthenticationFilter [doFilterInternal] token 값 추출 완료 , .token : null
+[2023-02-22 17:55:20.132] [INFO ] [http-nio-8080-exec-5] com.springboot.myfirsttime.config.security.JwtAuthenticationFilter [doFilterInternal] token 값 유효성 체크 시작
+[2023-02-22 17:55:20.135] [WARN ] [http-nio-8080-exec-5] org.springframework.web.servlet.mvc.support.DefaultHandlerExceptionResolver Resolved [org.springframework.web.HttpRequestMethodNotSupportedException: Request method 'GET' not supported]
+[2023-02-22 17:55:38.126] [INFO ] [http-nio-8080-exec-6] com.springboot.myfirsttime.config.security.JwtTokenProvider [resolveToken] HTTP 헤더에서 Token 값 추출
+[2023-02-22 17:55:38.126] [INFO ] [http-nio-8080-exec-6] com.springboot.myfirsttime.config.security.JwtAuthenticationFilter [doFilterInternal] token 값 추출 완료 , .token : null
+[2023-02-22 17:55:38.126] [INFO ] [http-nio-8080-exec-6] com.springboot.myfirsttime.config.security.JwtAuthenticationFilter [doFilterInternal] token 값 유효성 체크 시작
+[2023-02-22 17:55:38.127] [WARN ] [http-nio-8080-exec-6] org.springframework.web.servlet.mvc.support.DefaultHandlerExceptionResolver Resolved [org.springframework.web.HttpRequestMethodNotSupportedException: Request method 'GET' not supported]
+[2023-02-22 17:57:03.403] [INFO ] [http-nio-8080-exec-10] com.springboot.myfirsttime.config.security.JwtTokenProvider [resolveToken] HTTP 헤더에서 Token 값 추출
+[2023-02-22 17:57:03.403] [INFO ] [http-nio-8080-exec-10] com.springboot.myfirsttime.config.security.JwtAuthenticationFilter [doFilterInternal] token 값 추출 완료 , .token : null
+[2023-02-22 17:57:03.403] [INFO ] [http-nio-8080-exec-10] com.springboot.myfirsttime.config.security.JwtAuthenticationFilter [doFilterInternal] token 값 유효성 체크 시작
+[2023-02-22 17:57:03.404] [INFO ] [http-nio-8080-exec-10] com.springboot.myfirsttime.member.controller.SignController [sign-in] 로그인 시도 중입니다. id : kim1022, pw : ****
+[2023-02-22 17:57:03.405] [INFO ] [http-nio-8080-exec-10] com.springboot.myfirsttime.member.service.impl.SignServiceImpl [SignIn] 회원 정보 요청
+[2023-02-22 17:57:03.510] [INFO ] [http-nio-8080-exec-10] com.springboot.myfirsttime.member.service.impl.SignServiceImpl [SignIn] ID : 1
+[2023-02-22 17:57:03.510] [INFO ] [http-nio-8080-exec-10] com.springboot.myfirsttime.member.service.impl.SignServiceImpl 패스워드 비교 수행
+[2023-02-22 17:57:03.560] [INFO ] [http-nio-8080-exec-10] com.springboot.myfirsttime.member.service.impl.SignServiceImpl [SignIn] 패스워드 일치
+[2023-02-22 17:57:03.560] [INFO ] [http-nio-8080-exec-10] com.springboot.myfirsttime.member.service.impl.SignServiceImpl [SignIn] SignInResultDto 객체 생성
+[2023-02-22 17:57:03.560] [INFO ] [http-nio-8080-exec-10] com.springboot.myfirsttime.config.security.JwtTokenProvider [createToken] 토큰 생성 시작
+[2023-02-22 17:57:03.672] [INFO ] [http-nio-8080-exec-10] com.springboot.myfirsttime.config.security.JwtTokenProvider [createToken] 토큰 생성 완료
+[2023-02-22 17:57:03.672] [INFO ] [http-nio-8080-exec-10] com.springboot.myfirsttime.member.service.impl.SignServiceImpl [SignIn] 객체에 값 주입
+[2023-02-22 17:57:03.672] [INFO ] [http-nio-8080-exec-10] com.springboot.myfirsttime.member.controller.SignController [sign-in] 정상 로그인되었습니다. id : kim1022, token : eyJhbGciOiJIUzI1NiJ9.eyJzdWIiOiJraW0xMDIyIiwicm9sZXMiOlsiUk9MRV9VU0VSIl0sImlhdCI6MTY3NzA1NjIyMywiZXhwIjoxNjc3MDU5ODIzfQ.lq7a-_iJKcmp9y0pAli48bHWwbbyUSQPlP0Qv9DpaxY
+[2023-02-22 18:08:02.694] [INFO ] [http-nio-8080-exec-2] com.springboot.myfirsttime.config.security.JwtTokenProvider [resolveToken] HTTP 헤더에서 Token 값 추출
+[2023-02-22 18:08:02.694] [INFO ] [http-nio-8080-exec-2] com.springboot.myfirsttime.config.security.JwtAuthenticationFilter [doFilterInternal] token 값 추출 완료 , .token : null
+[2023-02-22 18:08:02.695] [INFO ] [http-nio-8080-exec-2] com.springboot.myfirsttime.config.security.JwtAuthenticationFilter [doFilterInternal] token 값 유효성 체크 시작
+[2023-02-22 18:08:02.697] [ERROR] [http-nio-8080-exec-2] com.springboot.myfirsttime.member.controller.SignController ExceptionHandler 호출, null,접근이 금지되었습니다.
+[2023-02-22 18:10:03.048] [INFO ] [SpringApplicationShutdownHook] org.springframework.orm.jpa.LocalContainerEntityManagerFactoryBean Closing JPA EntityManagerFactory for persistence unit 'default'
+[2023-02-22 18:10:03.049] [INFO ] [SpringApplicationShutdownHook] com.zaxxer.hikari.HikariDataSource HikariPool-1 - Shutdown initiated...
+[2023-02-22 18:10:03.051] [INFO ] [SpringApplicationShutdownHook] com.zaxxer.hikari.HikariDataSource HikariPool-1 - Shutdown completed.
