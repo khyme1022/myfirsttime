@@ -1,10 +1,10 @@
 package com.springboot.myfirsttime.board.data.repository.Impl;
 
 import com.springboot.myfirsttime.board.data.entity.Board;
+import com.springboot.myfirsttime.board.data.entity.QBoard;
 import com.springboot.myfirsttime.board.data.repository.BoardCustomRepository;
 import org.springframework.data.jpa.repository.support.QuerydslRepositorySupport;
 
-import java.com.springboot.myfirsttime.board.data.entity.QBoard;
 
 public class BoardCustomRepositoryImpl extends QuerydslRepositorySupport implements BoardCustomRepository {
     public BoardCustomRepositoryImpl() {
@@ -29,4 +29,16 @@ public class BoardCustomRepositoryImpl extends QuerydslRepositorySupport impleme
                 .where(qBoard.no.eq(boardNum))
                 .execute();
     }
+
+    @Override
+    public void viewAdd(int view, int boardNum) {
+        QBoard qBoard = QBoard.board;
+        update(qBoard)
+                .set(qBoard.view, view+1)
+                .where(qBoard.no.eq(boardNum))
+                .execute();
+    }
+
+
+
 }

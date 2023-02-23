@@ -27,35 +27,45 @@ public class BoardServiceImpl implements BoardService {
     //글 작성 메소드
     @Override
     public void writeBoard(HttpServletRequest request) {
-        LOGGER.info("[writeBoard] 글 작성");
-        Board board = new BoardRequestDto(request).toEntity();
+        LOGGER.info("[writeBoard] 글 작성 메소드 시작");
+        BoardRequestDto newBoard = new BoardRequestDto(request);
+        LOGGER.info("[writeBoard] BoardRequestDto 전달 완료");
+        Board board = newBoard.toEntity();
         boardRepository.save(board);
+        LOGGER.info("[writeBoard] 글 작성 완료");
     }
     // 글 리스트 보여주는 메소드
     @Override
     public List<BoardResponseDto> showBoardList(int pageNum) {
-        LOGGER.info("[showBoardList] 글 작성");
+        LOGGER.info("[showBoardList] 글 리스트 출력 시작");
         Page<Board> boardList = boardRepository.findByisDeleteOrderByNoDesc(false, PageRequest.of(pageNum,2));
-
+        LOGGER.info("[showBoardList] 글 리스트 출력 완료");
         return boardList.stream().map(BoardResponseDto::new).collect(Collectors.toList());
     }
     // 글 상세내용
     @Override
     public BoardResponseDto showBoard(int boardNum) {
+        LOGGER.info("[showBoardList] 글 출력 시작");
         Board board = boardRepository.findByisDeleteAndNo(false,boardNum);
         BoardResponseDto result= new BoardResponseDto(board);
+        LOGGER.info("[showBoardList] 글 출력 완료");
         return result;
     }
 
     // 글 수정 메소드 request 객체를 통해 수정 가능 내용인 제목과 내용을 받아오고 글 번호 역시 받아온다.
     @Override
     public void modifyBoard(HttpServletRequest request, int boardNum) {
+        LOGGER.info("[showBoardList] 글 수정 시작");
         Board updateBoard = new BoardRequestDto(request).toEntity();
         boardRepository.updateByNo(updateBoard.getTitle(),updateBoard.getContent(),boardNum);
+        LOGGER.info("[showBoardList] 글 수정 완료");
     }
     // 글 삭제 메소드
     @Override
     public void deleteBoard(int boardNum) {
+        LOGGER.info("[showBoardList] 글 삭제 시작");
+        
         boardRepository.deleteByNo(boardNum);
+        LOGGER.info("[showBoardList] 글 삭제 완료");
     }
 }
