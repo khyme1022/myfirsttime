@@ -31,10 +31,10 @@ public class BoardCustomRepositoryImpl extends QuerydslRepositorySupport impleme
     }
 
     @Override
-    public void viewAdd(int view, int boardNum) {
+    public void viewAdd(int boardNum) {
         QBoard qBoard = QBoard.board;
         update(qBoard)
-                .set(qBoard.view, view+1)
+                .set(qBoard.view, qBoard.view.add(1))
                 .where(qBoard.no.eq(boardNum))
                 .execute();
     }

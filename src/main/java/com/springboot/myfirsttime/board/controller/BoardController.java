@@ -47,6 +47,7 @@ public class BoardController {
      * @return  ResponseEntity<BoardResponseDto> 글 내용
      * /board/2로 GET 요청 시 해당 글번호에 해당하는 글을 보여줌
      */
+    @Transactional
     @GetMapping("/{boardNum}")
     public ResponseEntity<BoardResponseDto> readBoard(
             @PathVariable("boardNum") int boardNum

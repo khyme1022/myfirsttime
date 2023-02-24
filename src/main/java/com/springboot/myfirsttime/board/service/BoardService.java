@@ -12,4 +12,5 @@ public interface BoardService {
     BoardResponseDto showBoard(int boardNum);
     void modifyBoard(HttpServletRequest request, int boardNum);
     void deleteBoard(int boardNum);
+
 }

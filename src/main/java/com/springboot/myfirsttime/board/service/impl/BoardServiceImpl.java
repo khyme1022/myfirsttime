@@ -46,8 +46,10 @@ public class BoardServiceImpl implements BoardService {
     @Override
     public BoardResponseDto showBoard(int boardNum) {
         LOGGER.info("[showBoardList] 글 출력 시작");
+        boardRepository.viewAdd(boardNum);
         Board board = boardRepository.findByisDeleteAndNo(false,boardNum);
         BoardResponseDto result= new BoardResponseDto(board);
+
         LOGGER.info("[showBoardList] 글 출력 완료");
         return result;
     }
@@ -68,4 +70,5 @@ public class BoardServiceImpl implements BoardService {
         boardRepository.deleteByNo(boardNum);
         LOGGER.info("[showBoardList] 글 삭제 완료");
     }
+
 }

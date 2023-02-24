@@ -4,5 +4,5 @@ public interface BoardCustomRepository {
     public void updateByNo(String title, String content, int boardNum);
     public void deleteByNo(int boardNum);
 
-    public void viewAdd(int view, int boardNum);
+    public void viewAdd(int boardNum);
 }
