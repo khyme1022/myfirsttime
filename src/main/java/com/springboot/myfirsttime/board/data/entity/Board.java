@@ -1,6 +1,5 @@
 package com.springboot.myfirsttime.board.data.entity;
 
-import com.springboot.myfirsttime.common.BaseTimeEntity;
 import lombok.AllArgsConstructor;
 import lombok.Builder;
 import lombok.Getter;
