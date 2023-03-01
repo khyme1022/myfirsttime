@@ -37,11 +37,10 @@ public class SecurityConfiguration{
             .and()
                 .authorizeRequests()
                 //authorizeRequests() - HttpServletRequest를 사용하겠다
-                .antMatchers("/sign-api/sign-in","/sign-api/sign-up",
-                        "/sign-api/exception").permitAll()
-                .antMatchers(HttpMethod.GET, "/product/**").permitAll()
-                .antMatchers("**exception**").permitAll()
-                .anyRequest().hasRole("ADMIN")
+                .antMatchers(HttpMethod.POST,"/board-api/**").hasRole("USER")
+                .antMatchers(HttpMethod.PUT,"/board-api/**").hasRole("USER")
+                .antMatchers(HttpMethod.DELETE,"/board-api/**").hasRole("USER")
+                .anyRequest().permitAll()
 
                 /*
                  * authorizeRequests() 애플리케이션에 들어오는 요청에 대한 사용 권한 체크
