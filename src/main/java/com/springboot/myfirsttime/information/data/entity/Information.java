@@ -5,20 +5,20 @@ import lombok.AllArgsConstructor;
 import lombok.Builder;
 import lombok.Getter;
 import lombok.NoArgsConstructor;
+import org.springframework.data.annotation.CreatedDate;
+import org.springframework.data.annotation.LastModifiedDate;
 import org.springframework.data.jpa.domain.support.AuditingEntityListener;
 
 import javax.persistence.*;
+import java.time.LocalDateTime;
 
-/**
- *  공지사항 게시판으로 오직 관리자만 글쓰기가 가능하다
- */
 @Entity(name="INFO_BOARD")
 @Getter
 @AllArgsConstructor
 @NoArgsConstructor
 @Builder
 @EntityListeners(AuditingEntityListener.class) //JPA 사용
-public class information extends BaseTimeEntity {
+public class Information{
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     @Column(name = "NO", nullable = false, updatable = false)
@@ -38,4 +38,11 @@ public class information extends BaseTimeEntity {
     /* 글 조회 수 */
     @Column(name = "VIEW", nullable = false, columnDefinition = "Integer default 0")
     private int view;
+    @CreatedDate
+    @Column(name = "WRITE_DATE", columnDefinition = "DATETIME", nullable = false, updatable = false)
+    private LocalDateTime createdDate;
+    @LastModifiedDate
+    @Column(name = "MODIFIED_DATE", columnDefinition = "DATETIME", nullable = false, updatable = false)
+    private LocalDateTime modifiedDate;
 }
+
