@@ -1,6 +1,6 @@
 package com.springboot.myfirsttime.information.data.dto;
 
-import com.springboot.myfirsttime.information.data.entity.Information;
+import com.springboot.myfirsttime.information.service.entity.Information;
 import lombok.AllArgsConstructor;
 import lombok.Getter;
 import lombok.NoArgsConstructor;
