@@ -38,11 +38,20 @@ public class Information{
     /* 글 조회 수 */
     @Column(name = "VIEW", nullable = false, columnDefinition = "Integer default 0")
     private int view;
+    /* 제도 적용 나이 */
+    @Column(name ="APPLY_AGE")
+    private String applyAge;
+    /* 이미지 파일 루트*/
+    @Column(name = "IMG_ROUTE",columnDefinition ="LONGTEXT default NULL" )
+    private String imgRoute;
+    /* 글 작성 날짜 */
     @CreatedDate
     @Column(name = "WRITE_DATE", columnDefinition = "DATETIME", nullable = false, updatable = false)
     private LocalDateTime createdDate;
+    /* 수정 날짜 */
     @LastModifiedDate
     @Column(name = "MODIFIED_DATE", columnDefinition = "DATETIME", nullable = false, updatable = false)
     private LocalDateTime modifiedDate;
+
 }
 
