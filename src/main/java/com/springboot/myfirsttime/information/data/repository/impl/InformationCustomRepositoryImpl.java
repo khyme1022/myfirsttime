@@ -10,4 +10,8 @@ public class InformationCustomRepositoryImpl extends QuerydslRepositorySupport i
     }
 
 
+    @Override
+    public void viewAdd(int boardNum) {
+
+    }
 }
