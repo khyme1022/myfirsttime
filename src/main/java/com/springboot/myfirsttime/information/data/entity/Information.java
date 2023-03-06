@@ -1,6 +1,5 @@
-package com.springboot.myfirsttime.information.service.entity;
+package com.springboot.myfirsttime.information.data.entity;
 
-import com.springboot.myfirsttime.common.BaseTimeEntity;
 import lombok.AllArgsConstructor;
 import lombok.Builder;
 import lombok.Getter;
