@@ -5,7 +5,6 @@ import lombok.Builder;
 import lombok.Getter;
 import lombok.NoArgsConstructor;
 import org.springframework.data.annotation.CreatedDate;
-import org.springframework.data.annotation.LastModifiedDate;
 import org.springframework.data.jpa.domain.support.AuditingEntityListener;
 
 import javax.persistence.*;
@@ -17,7 +16,7 @@ import java.time.LocalDateTime;
 @NoArgsConstructor
 @Builder
 @EntityListeners(AuditingEntityListener.class) //JPA 사용
-public class Information{
+public class Info {
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     @Column(name = "NO", nullable = false, updatable = false)
@@ -48,9 +47,6 @@ public class Information{
     @Column(name = "WRITE_DATE", columnDefinition = "DATETIME", nullable = false, updatable = false)
     private LocalDateTime createdDate;
     /* 수정 날짜 */
-    @LastModifiedDate
-    @Column(name = "MODIFIED_DATE", columnDefinition = "DATETIME", nullable = false, updatable = false)
-    private LocalDateTime modifiedDate;
 
 }
 

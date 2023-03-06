@@ -1,6 +1,6 @@
 package com.springboot.myfirsttime.information.data.dto;
 
-import com.springboot.myfirsttime.information.data.entity.Information;
+import com.springboot.myfirsttime.information.data.entity.Info;
 import lombok.AllArgsConstructor;
 import lombok.Getter;
 import lombok.NoArgsConstructor;
@@ -12,7 +12,7 @@ import java.time.LocalDateTime;
 @Setter
 @AllArgsConstructor
 @NoArgsConstructor
-public class InformationResponseDto {
+public class InfoResponseDto {
     private int no;
     private String writer;
     private String title;
@@ -22,9 +22,8 @@ public class InformationResponseDto {
     private String applyAge;
     private String imgRoute;
     private LocalDateTime createdDate;
-    private LocalDateTime modifiedDate;
 
-    public InformationResponseDto(Information info){
+    public InfoResponseDto(Info info){
         this.no = info.getNo();
         this.writer = info.getWriter();
         this.title = info.getTitle();
@@ -33,6 +32,5 @@ public class InformationResponseDto {
         this.view = info.getView();
         this.imgRoute = info.getImgRoute();
         this.createdDate = info.getCreatedDate();
-        this.modifiedDate = info.getModifiedDate();
     }
 }
