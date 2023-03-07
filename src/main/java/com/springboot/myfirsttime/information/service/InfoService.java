@@ -8,4 +8,5 @@ public interface InfoService {
     public void saveInfo();
     public List<InfoResponseDto> showBoardList(int pageNum);
     public InfoResponseDto showBoard(int boardNum);
+
 }

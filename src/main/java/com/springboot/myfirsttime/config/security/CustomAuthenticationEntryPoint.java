@@ -32,9 +32,8 @@ public class CustomAuthenticationEntryPoint implements AuthenticationEntryPoint 
         response.setContentType("application/json");
         response.setCharacterEncoding("utf-8");
         response.getWriter().write("인증 실패");
-        //response.getWriter().write(objectMapper.writeValueAsString(entryPointErrorResponse));
 
 
     }
-    // 굳이 ObjectMapper를 쓰면서 형변환하고 dto 객체를 생성해서 메시지를 전달해야할까? 그냥 전달하면 안됨?
+
 }
