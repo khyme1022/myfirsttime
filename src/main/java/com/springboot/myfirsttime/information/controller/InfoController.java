@@ -19,19 +19,18 @@ public class InfoController {
     private final Logger LOGGER = LoggerFactory.getLogger(InfoController.class);
 
     private final InfoService infoService;
-    private final InfoCrawling infoCrawling;
+
 
     @Autowired
-    public InfoController(InfoService infoService,InfoCrawling infoCrawling) {
+    public InfoController(InfoService infoService) {
         this.infoService = infoService;
-        this.infoCrawling = infoCrawling;
+
     }
 
+    @GetMapping("/Data")
+    public List<String> showData() throws InterruptedException {
+        LOGGER.info("[크롤링 시작] ");
 
-    @GetMapping("/get-Data")
-    public List<String> showData(String url) throws InterruptedException {
-        LOGGER.info("[크롤링 시작] url : {}",url);
-
-        return infoCrawling.getDataList(url) ;
+        return infoService.crawlInfo();
     }
 }

@@ -5,6 +5,7 @@ import lombok.Builder;
 import lombok.Getter;
 import lombok.NoArgsConstructor;
 import org.springframework.data.annotation.CreatedDate;
+import org.springframework.data.annotation.LastModifiedDate;
 import org.springframework.data.jpa.domain.support.AuditingEntityListener;
 
 import javax.persistence.*;
@@ -37,8 +38,8 @@ public class Info {
     @Column(name = "VIEW", nullable = false, columnDefinition = "Integer default 0")
     private int view;
     /* 제도 적용 나이 */
-    @Column(name ="APPLY_AGE")
-    private String applyAge;
+    @Column(name ="TARGET")
+    private String target;
     /* 이미지 파일 루트*/
     @Column(name = "IMG_ROUTE",columnDefinition ="LONGTEXT default NULL" )
     private String imgRoute;
@@ -46,7 +47,6 @@ public class Info {
     @CreatedDate
     @Column(name = "WRITE_DATE", columnDefinition = "DATETIME", nullable = false, updatable = false)
     private LocalDateTime createdDate;
-    /* 수정 날짜 */
 
 }
 

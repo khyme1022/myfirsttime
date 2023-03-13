@@ -83,10 +83,9 @@
 			<artifactId>selenium-java</artifactId>
 			<version>4.8.0</version>
 		</dependency>
-
-
-
 	</dependencies>
+
+	<!-- selenium 오류나서 추가했더니 됐음! -->
 	<dependencyManagement>
 		<dependencies>
 			<dependency>
