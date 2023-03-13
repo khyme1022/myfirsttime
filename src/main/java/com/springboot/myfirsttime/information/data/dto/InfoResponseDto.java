@@ -19,7 +19,6 @@ public class InfoResponseDto {
     private String content;
     private boolean isDelete;
     private int view;
-    private String target;
     private String imgRoute;
     private LocalDateTime createdDate;
 
@@ -30,7 +29,6 @@ public class InfoResponseDto {
         this.content = info.getContent();
         this.isDelete = info.isDelete();
         this.view = info.getView();
-        this.target = info.getTarget();
         this.imgRoute = info.getImgRoute();
         this.createdDate = info.getCreatedDate();
     }

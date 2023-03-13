@@ -37,9 +37,6 @@ public class Info {
     /* 글 조회 수 */
     @Column(name = "VIEW", nullable = false, columnDefinition = "Integer default 0")
     private int view;
-    /* 제도 적용 나이 */
-    @Column(name ="TARGET")
-    private String target;
     /* 이미지 파일 루트*/
     @Column(name = "IMG_ROUTE",columnDefinition ="LONGTEXT default NULL" )
     private String imgRoute;

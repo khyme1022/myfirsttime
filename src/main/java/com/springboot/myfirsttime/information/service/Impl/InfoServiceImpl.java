@@ -32,7 +32,7 @@ public class InfoServiceImpl implements InfoService {
     @Override
     public List<String> crawlInfo() throws InterruptedException {
         //List<String> urlList = setURL();
-        String url = "https://www.moel.go.kr/policy/policyinfo/young/list.do";
+        String url = "https://www.moel.go.kr/policy/policyinfo/young/list11.do";
         List<String> rawData = null;
 
 
@@ -44,12 +44,12 @@ public class InfoServiceImpl implements InfoService {
 
 
     @Override
-    public List<InfoResponseDto> showBoardList(int pageNum) {
+    public List<InfoResponseDto> showInfoList(int pageNum) {
         return null;
     }
 
     @Override
-    public InfoResponseDto showBoard(int boardNum) {
+    public InfoResponseDto showInfo(int boardNum) {
         return null;
     }
 

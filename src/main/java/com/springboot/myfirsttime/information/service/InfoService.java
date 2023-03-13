@@ -8,7 +8,7 @@ import java.util.Map;
 public interface InfoService {
     public void saveInfo();
     public List<String> crawlInfo() throws InterruptedException;
-    public List<InfoResponseDto> showBoardList(int pageNum);
-    public InfoResponseDto showBoard(int boardNum);
+    public List<InfoResponseDto> showInfoList(int pageNum);
+    public InfoResponseDto showInfo(int boardNum);
 
 }
