@@ -31,12 +31,15 @@ public class InfoController {
 
     /**
      * 설정한 URL에서 크롤링을 실행해서 DB에 저장
+     * 관리자만 실행 가능
      * @throws InterruptedException
      */
     @PostMapping
     public void crawlData() throws InterruptedException {
         LOGGER.info("[crawlData] 실행시작 ");
-        infoService.crawlInfo();
+        String url = "https://www.moel.go.kr/policy/policyinfo/young/list.do";
+        infoService.saveInfo(url);
+
         LOGGER.info("[crawlData] 실행완료 ");
     }
     /**
