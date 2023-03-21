@@ -4,7 +4,6 @@ import com.springboot.myfirsttime.information.data.dto.InfoResponseDto;
 import com.springboot.myfirsttime.information.data.entity.Info;
 import com.springboot.myfirsttime.information.data.repository.InfoRepository;
 import com.springboot.myfirsttime.information.service.InfoService;
-import com.springboot.myfirsttime.information.service.crawling.InfoCrawling;
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
@@ -13,35 +12,44 @@ import org.openqa.selenium.chrome.ChromeOptions;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.data.domain.Page;
+import org.springframework.data.domain.PageRequest;
 import org.springframework.stereotype.Service;
 
-import java.net.URL;
 import java.util.ArrayList;
 import java.util.List;
 import java.util.concurrent.TimeUnit;
+import java.util.stream.Collectors;
 
 @Service
 public class InfoServiceImpl implements InfoService {
     private final Logger LOGGER = LoggerFactory.getLogger(InfoService.class);
     public InfoRepository infoRepository;
-    public InfoCrawling infoCrawling;
 
     @Autowired
-    public InfoServiceImpl(InfoRepository infoRepository,InfoCrawling infoCrawling) {
+    public InfoServiceImpl(InfoRepository infoRepository) {
         this.infoRepository = infoRepository;
-        this.infoCrawling = infoCrawling;
+
 
     }
 
     @Override
     public List<InfoResponseDto> showInfoList(int pageNum) {
-        return null;
+        LOGGER.info("[showInfoList] 글 리스트 출력 시작");
+        Page<Info> infoPage = infoRepository.findByisDeleteOrderByNoDesc(false, PageRequest.of(pageNum,2));
+        LOGGER.info("[showInfoList] 글 리스트 출력 완료");
+        return infoPage.stream().map(InfoResponseDto::new).collect(Collectors.toList());
     }
 
     
     @Override
     public InfoResponseDto showInfo(int boardNum) {
-        return null;
+        LOGGER.info("[showInfo] 글 출력 시작");
+        infoRepository.viewAdd(boardNum);
+        Info info = infoRepository.findByisDeleteAndNo(false,boardNum);
+        LOGGER.info("[showInfo] 글 출력 완료");
+
+        return new InfoResponseDto(info);
     }
 
     // infoList에 담긴 정보 저장하는 메소드
@@ -51,6 +59,7 @@ public class InfoServiceImpl implements InfoService {
         infoRepository.saveAll(infoList);
         LOGGER.info("[saveInfo] 실행 완료 ");
     }
+
     // 크롤링 후 문자열을 InfoList에 저장해 return하는 메소드
     public List<Info> crawlInfo(String url) throws InterruptedException {
         LOGGER.info("[crawlInfo] 실행 ");

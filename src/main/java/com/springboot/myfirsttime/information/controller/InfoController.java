@@ -51,6 +51,7 @@ public class InfoController {
     @GetMapping
     public ResponseEntity<List<InfoResponseDto>> readInfoList(
             @RequestParam(value="page",required = false,defaultValue = "1") int pageNum){
+        LOGGER.info("[readInfoList] 글 리스트 출력 ");
         return ResponseEntity.ok(infoService.showInfoList(pageNum-1));
     }
     /**
@@ -64,6 +65,7 @@ public class InfoController {
     public ResponseEntity<InfoResponseDto> readInfo(
             @PathVariable("infoNum") int infoNum
     ){
+        LOGGER.info("[readInfo] 글 리스트 출력 ");
         return ResponseEntity.ok(infoService.showInfo(infoNum));
 
     }
