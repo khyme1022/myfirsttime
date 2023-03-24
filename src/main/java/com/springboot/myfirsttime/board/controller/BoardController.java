@@ -25,7 +25,7 @@ public class BoardController {
      * @param request "글 내용"
      * @return  ResponseEntity<String> "작성완료"
      */
-    @PostMapping("/write")
+    @PostMapping
     public ResponseEntity<String> writeBoard(HttpServletRequest request){
         boardService.writeBoard(request);
         return ResponseEntity.status(HttpStatus.OK).body("작성 완료");

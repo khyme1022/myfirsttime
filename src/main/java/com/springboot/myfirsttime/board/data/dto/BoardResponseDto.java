@@ -3,6 +3,8 @@ package com.springboot.myfirsttime.board.data.dto;
 import com.springboot.myfirsttime.board.data.entity.Board;
 import lombok.*;
 
+import java.time.LocalDateTime;
+
 @Getter
 @Setter
 @AllArgsConstructor
@@ -16,6 +18,8 @@ public class BoardResponseDto {
     private Boolean isDelete;
     private int view;
     private String imgRoute;
+    private LocalDateTime createdDate;
+    private LocalDateTime modifiedDate;
 
     public BoardResponseDto(Board board){
         this.no = board.getNo();
@@ -24,6 +28,9 @@ public class BoardResponseDto {
         this.content = board.getContent();
         this.isDelete = board.isDelete();
         this.view = board.getView();
+        this.imgRoute = board.getImgRoute();
+        this.createdDate = board.getCreatedDate();
+        this.modifiedDate = board.getModifiedDate();
     }
 
 }
