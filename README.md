@@ -10,3 +10,5 @@ Spring Boot 독학을 테스트해보기 위한 프로젝트
 버전 관리 : Git
 ## 기능
 Spring Security 토큰을 사용한 권한 설정 및 로그인
+Spring JPA 기능을 사용한 CRUD 기능 및 페이징
+Selenium 라이브러리를 이용한 웹 크롤링
