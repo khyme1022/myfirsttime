@@ -3,7 +3,6 @@ package com.springboot.myfirsttime.information.controller;
 import com.springboot.myfirsttime.board.service.impl.BoardServiceImpl;
 import com.springboot.myfirsttime.information.data.dto.InfoResponseDto;
 import com.springboot.myfirsttime.information.service.InfoService;
-import com.springboot.myfirsttime.information.service.crawling.InfoCrawling;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 import org.springframework.beans.factory.annotation.Autowired;
